@@ -122,18 +122,11 @@ def main(sparseness, l1, l2, r1, r2):
     ax.scatter(X[theta_deltas_floor==0.0], Y[theta_deltas_floor==0.0], Z[theta_deltas_floor==0.0], c='c', marker='^', alpha=0.5)
     ax.scatter(X[theta_deltas_floor==1.0], Y[theta_deltas_floor==1.0], Z[theta_deltas_floor==1.0], c='m', marker='^', alpha=0.5)
 
-<<<<<<< HEAD
-    cube = np.array(cube)
-    ax.scatter(cube[0], cube[1], cube[2], c='w', marker='o', alpha=0.05)
+    # cube = np.array(cube)
+    # ax.scatter(cube[0], cube[1], cube[2], c='w', marker='o', alpha=0.05)
 
     #plt.show()
     plt.savefig('can_move.png')
-=======
-    #cube = np.array(cube)
-    #ax.scatter(cube[0], cube[1], cube[2], c='w', marker='o', alpha=0.05)
-
-    plt.show()
->>>>>>> 7bd0a74e85adbbc48a13feb7f34c474c1954ca1d
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analyze about motion of parallel link')
