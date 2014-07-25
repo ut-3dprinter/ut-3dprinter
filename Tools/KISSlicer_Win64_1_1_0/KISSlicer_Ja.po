@@ -1,0 +1,993 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: KISSlicer Japanese\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"Language: Japanese\n"
+
+msgid "$ / cm^3"
+msgstr "＄/cm^3"
+
+msgid "$ / hour"
+msgstr "$ / 時"
+
+msgid "&Open"
+msgstr "開く"
+
+msgid "&Save"
+msgstr "保存"
+
+msgid "&Slice"
+msgstr "スライス"
+
+msgid "&Stop"
+msgstr "停止"
+
+msgid "..."
+msgstr "..."
+
+msgid "0.0"
+msgstr "0.0"
+
+msgid "1st Layer Max Speed"
+msgstr "１層目の最高速度"
+
+msgid "3D Background"
+msgstr "3Dバックグラウンド"
+
+msgid "@2> Calculate"
+msgstr "@2> 計算"
+
+msgid "@8<"
+msgstr "@8<"
+
+msgid "@< Fast             Precise@>"
+msgstr "@< 速い                    正確@>"
+
+msgid "@< Off [Support: %s] On@>"
+msgstr "@< オフ [サポート: %s] オン@>"
+
+msgid "@< Off [Support]  Dense@>"
+msgstr "@< オフ[サポート]  濃密@>"
+
+msgid ""
+"A good default is to make this the same as Extrusion Width; compared to the "
+"extrusion width: thinner reduces stress / warping, thicker improves bonding"
+msgstr ""
+"! これを射出幅と同じにすると良いデフォルトになる；射出幅に比べて：細い方がス"
+"トレス軽減/巻き込んだり、分厚い方がボンディングが強化される"
+
+msgid "About"
+msgstr "KISSlicer について"
+
+msgid "Acceleration of the print-head in X & Y, used for timing estimates"
+msgstr "時間予測用の、プリントヘッドのＸ,Ｙ移動時の加速度"
+
+msgid "Add an offset to the output G-code's Z values"
+msgstr "ＧコードのＺ値をオフセットして出力します"
+
+msgid "Adds comments to the G-code (very very helpful!)"
+msgstr "Ｇコードにコメントを追加する（かなり役立つ！）"
+
+msgid ""
+"Adjust the surface inward (in X,Y plane).  This should be <= Extrusion "
+"Width / 2"
+msgstr "表面を（X,Y 平面に）内向きに調整します。射出幅/ 2以下になるはずです"
+
+msgid ""
+"After a destring (if enabled), before a travel, lift the head by this height."
+msgstr ""
+"（可能であれば）各パス射出後の移動前に、この高さにヘッドを持ち上げます。"
+
+msgid "All Models"
+msgstr "全モデル"
+
+msgid "Angle"
+msgstr "角度"
+
+msgid ""
+"Any jump < this threshold will not wipe (or destring on 5D), so 0 would "
+"never disable a destring/wipe"
+msgstr ""
+"! この値より小さいジャンプはワイプしない（または5Dでデストリングしない）ため"
+"０はデストリング/ワイプを無効にすることはできない"
+
+msgid ""
+"Any jump > this threshold will force a wipe and destring, so a 0 would force "
+"a destring/wipe on all travels"
+msgstr ""
+"このしきい値はワイプとデストリングを強制し、0 は全ての移動でデストリング/ワイ"
+"プを強制します。"
+
+msgid ""
+"Any surface of the model more than X degrees off vertical will get support."
+msgstr "! モデルの全ての表面でX°以上縦になっている角度はサポートされる。"
+
+msgid "Auto-Rotate For Packing"
+msgstr "パッキングのために自動回転"
+
+msgid "Available print width of the bed."
+msgstr "プリント可能なベッド幅"
+
+msgid "Axis"
+msgstr "軸"
+
+msgid "Background"
+msgstr "バックグラウンド"
+
+msgid "Bed"
+msgstr "ベッド"
+
+msgid "Bed Center [mm]  X"
+msgstr "ベッド中心 [mm]  X"
+
+msgid "Bed Level && Z"
+msgstr "ベッドレベル && Z"
+
+msgid "Bed Roughness [mm]"
+msgstr "ベッドの粗さ [mm]"
+
+msgid "Bed STL Model"
+msgstr "ベッドのSTLモデル"
+
+msgid "Bed Size [mm]  X"
+msgstr "ベッドサイズ [mm]  X"
+
+msgid "Bed Z_max - Z_min: 1st layer thickness is fattened to compensate"
+msgstr "ベッドZ_最大 - Z_最小： 埋め合わせに1層目を太くする"
+
+msgid ""
+"Before moving to a new region, back-tracks over the most recent path or "
+"continues over the loop by this distance.  Wipe must also be enabled in the "
+"selected Style"
+msgstr ""
+"新しいリージョンに進む前に、一つ前の通路を後戻りするかループの上をこの距離だ"
+"け進む。選択されたスタイルでワイプを有効にしなければならない。"
+
+msgid "Calculate the cost per cm^3"
+msgstr "コスト／cm^3 を計算する"
+
+msgid "Center"
+msgstr "中心"
+
+msgid "Center all models on the bed"
+msgstr "全モデルをベッド中心に配置する"
+
+msgid "Change Registration Key"
+msgstr "登録キーを替える"
+
+msgid "Choose the Bed STL Model"
+msgstr "ベッドのＳＴＬモデルを選択"
+
+msgid ""
+"Chose a STL model to represent the printer's bed (make sure the origin "
+"coincides with where the printer would deposit plastic at 0,0)"
+msgstr ""
+"プリンターベッドを表すSTLモデルを選択（プラスチックを排出される場所がオリジン"
+"0,0と一致することを確認）"
+
+msgid "Click to add models"
+msgstr "クリックしてモデルを追加"
+
+msgid "Color"
+msgstr "色"
+
+msgid "Color Scheme"
+msgstr "色設定"
+
+msgid "Common values are bfb or gcode"
+msgstr "一般的な値は bfb または gcode"
+
+msgid ""
+"Controls how close the solid infill gets to the innermost loop (1.0 for "
+"maximum overlap)"
+msgstr "最も内側のループにどれだけ近づくかを制御する（最大重なりは1.0）"
+
+msgid "Controls the density of the main support"
+msgstr "メインサポートの密度をコントロールする"
+
+msgid ""
+"Controls the print speed (using the Printer profile's fast and slow speed "
+"settings)."
+msgstr ""
+"プリント速度を制御します（プリンタープロファイルを使って早く/遅く設定しま"
+"す。）"
+
+msgid "Cool"
+msgstr "クール"
+
+msgid "Copy this profile into a new one"
+msgstr "このプロファイルを新たなものにコピーする"
+
+msgid "Copy<LF>Profile"
+msgstr "コピー<LF>プロファイル"
+
+msgid "Cost of running this machine for one hour"
+msgstr "１時間のランニングコスト"
+
+msgid "Cost per cm^3, use whatever currency type you wish"
+msgstr "1cm^3あたりのコスト"
+
+msgid "Count"
+msgstr "数量"
+
+msgid "Crowning Threshold [mm]<LF>(small gap filler segments)"
+msgstr "クラウニング範囲[mm]<LF>（小さい隙間の充填部）"
+
+msgid ""
+"Crowning tries to fill in small gaps and thin walls.  Crowning paths must be "
+"longer than this to be kept.  Negative values disable crowning. 1mm is a "
+"good starting value."
+msgstr ""
+"! クラウニングは小さい隙間や薄い壁を埋めようとする。クラウニングの行く手はこ"
+"れより長くなくてはならない。マイナスの値はクラウニングを無効にしてしまう。1mm"
+"で始めるとよい。"
+
+msgid "De-String"
+msgstr "引き出し"
+
+msgid "Defaults@>"
+msgstr "デフォルト@>"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete the current profil"
+msgstr "現在のプロファイルを削除します"
+
+msgid "Delete<LF>Profile"
+msgstr "削除<LF>プロファイル"
+
+msgid ""
+"Density of the Sparse Infill and Stacked Sparse Infill (ratio is 1/"
+"whole_number)"
+msgstr ""
+"スパースインフィルとスタックド・スパースインフィルの密度（比率は1/"
+"whole_number)"
+
+msgid "Depth"
+msgstr "深さ"
+
+msgid "Depth scale of the seam crossover"
+msgstr "継ぎ目重なりの深さ"
+
+msgid "Diameter [mm]"
+msgstr "直径 [mm]"
+
+msgid "Disable 3D View on Slice"
+msgstr "スライスの3Dビューを無効にする"
+
+msgid "E is standard, Mach3 uses A B C"
+msgstr "Ｅが標準、Mach3はA B Cを使用"
+
+msgid "Enables a prime at the start of a path and a retract at the end"
+msgstr "! パスの始めに押し戻し、終わりに引き抜きを可能にする"
+
+msgid "Enter Product Key"
+msgstr "商品キーを入力してください"
+
+msgid "Enter Registration Key"
+msgstr "登録キーを入力してください"
+
+msgid "Extruder Flow"
+msgstr "エクストルーダー・フロー"
+
+msgid "Extruder for printing objects"
+msgstr "オブジェクトをプリントするエクストルーダー"
+
+msgid "Extruder for printing the main (lower) support"
+msgstr "主要サポートをプリントするエクストルーダー"
+
+msgid "Extruder for printing the raft"
+msgstr "ラフトをプリントするエクストルーダー"
+
+msgid "Extruder for printing the top of the support just under the model"
+msgstr "モデル直下サポート上面をプリントするエクストルーダー"
+
+msgid "Extrusion Width [mm]"
+msgstr "射出幅 [mm]"
+
+msgid "Fan Off"
+msgstr "ファンオフ"
+
+msgid "Fan On"
+msgstr "ファンオン"
+
+msgid "Fan Z [mm]"
+msgstr "ファン Z [mm]"
+
+msgid "Fan can do PWM<LF>(e.g. 'M106 Snnn')"
+msgstr "ファンの稼働能力PWM<LF>(e.g. 'M106 Snnn')"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "File Extension"
+msgstr "ファイルの拡張子"
+
+msgid "Firmware Type"
+msgstr "ファームウェアタイプ"
+
+msgid "First Layer"
+msgstr "１層目"
+
+msgid "Flow Tweak"
+msgstr "流量調節"
+
+msgid "Force any settings above the 'Settings Level' to use defaults"
+msgstr "! 'セッティングズ・レベル'以上の設定を強制的にデフォルトを使わせる"
+
+msgid "Foreground"
+msgstr "前景"
+
+msgid "G-code to turn of the fan, typically M107 but MakerBot uses M127"
+msgstr ""
+"ファンをオフにするためのG-コード,基本的にはM107だがメーカーボットはM127を使用"
+
+msgid "G-code to turn on the fan, typically M106 but MakerBot uses M126"
+msgstr ""
+"ファンをオンにするためのG-コード、基本的にはM106だがメーカーボットはM126を使"
+"用"
+
+msgid "Gain"
+msgstr "ゲイン"
+
+msgid "Gap"
+msgstr "ギャップ"
+
+msgid "Height"
+msgstr "高さ"
+
+msgid "Help"
+msgstr "ヘルプ"
+
+msgid "Horizontal Gap [mm] between the support and the object"
+msgstr "サポートと物体の間の水平のギャップ[mm]"
+
+msgid "How fast to retract / prime for destring under 5D firmware."
+msgstr "5Dファームウェア下で引き抜き/押し戻しする速度"
+
+msgid "How many mm to prime before starting a path (uses M227 on BfB printers)"
+msgstr "何mm押し戻ししてからパスを開始するか（BfBプリンターのM227を使用）"
+
+msgid ""
+"How many mm to suck back after ending a path (uses M227 on BfB printers)"
+msgstr "パス終了後に何mm吸引しますか（BfB プリンタでは M227 を使用）"
+
+msgid "How many to print"
+msgstr "プリントする個数"
+
+msgid "If a layer would have been quicker than this, the layer is slowed down"
+msgstr "指定秒数以下の場合、自動的に速度を落とします。"
+
+msgid ""
+"If slowing a layer to reach 'Min Layer [s]', make sure the fan is at least "
+"at this Duty Cycle %"
+msgstr ""
+"! もし 'Min Layer [s]'になるように層の速度を遅らすなら、最低でもファンがこの"
+"ヂューティーサイクル%であることを確認。"
+
+msgid ""
+"If the slicing operation *might* exceed this threshold, a warning will be "
+"shown"
+msgstr ""
+"もしスライシングオペレーションがこの範囲を超えそうになったら、警告が表示され"
+"る"
+
+msgid ""
+"If you have a heated bed, you can use the <BED> token in the G-code includes"
+msgstr "ヒーテッドベッドがある場合、G-コードにある<BED>トークンが使える。"
+
+msgid "Inch -> mm"
+msgstr "インチ -> mm"
+
+msgid "Include Comments"
+msgstr "コメントを含む"
+
+msgid "Infill Density"
+msgstr "インフィル密度"
+
+msgid "Infill Extrusion Width [mm]"
+msgstr "インフィルの射出幅 [mm]"
+
+msgid "Infill Style"
+msgstr "インフィルのスタイル"
+
+msgid "Infill: %1.1f%%  "
+msgstr "充填率：%1.1f%% "
+
+msgid "Infill: Hollow"
+msgstr "インフィル：空洞モード"
+
+msgid "Infill: Vase  "
+msgstr "インフィル：花瓶モード"
+
+msgid ""
+"Inflate the raft (or skirt) by this many [mm] in all directions to stick "
+"better to the bed"
+msgstr ""
+"ラフト（ 又はスカート ）を全方向にこの分 [mm] だけ膨らませるとベッドにより良"
+"くくっつく"
+
+msgid ""
+"Inflate the support by this many [mm] in all directions (it can help "
+"strengthen undercut support)"
+msgstr "サポートを全方向に[mm]膨らませる（アンダーカットサポートを強化できる）"
+
+msgid "Inflate<LF>Raft"
+msgstr "余幅<LF>ラフト"
+
+msgid "Inflate<LF>Support"
+msgstr "インフレート<LF>サポート"
+
+msgid "Inset  Surface [mm]"
+msgstr "インセット表面[mm]"
+
+msgid "Inside"
+msgstr "インサイド"
+
+msgid "Interface"
+msgstr "インターフェイス"
+
+msgid "Invoke a post process script on <FILE>"
+msgstr "<FILE>にプロセス後のスクリプトを作成"
+
+msgid "Jitterº"
+msgstr "ジッターº"
+
+msgid ""
+"KISSlicer treats the center of the bed as 0,0 but many printers do not.  "
+"Enter the X coordinate of the center of the bed (KISSlicer will offset the "
+"output G-code)"
+msgstr ""
+"KISSlicerは、ベッド中心を0,0として扱いますが、多くのプリンターはそうではあり"
+"ません。ベッド中心のＸ座標を入力します（KISSlicerはＧコード出力をオフセットし"
+"ます）"
+
+msgid ""
+"KISSlicer treats the center of the bed as 0,0 but many printers do not.  "
+"Enter the Y coordinate of the center of the bed (KISSlicer will offset the "
+"output G-code)"
+msgstr ""
+"KISSlicerは、ベッド中心をX0,Y0として扱いますが、多くのプリンタはそうではあり"
+"ません。<LF>ベッド中心のＹ座標を入力します（KISSlicerはＧ-コード出力をオフ"
+"セットします）"
+
+msgid ""
+"KISSlicer's internal model representation will have at least this resolution"
+msgstr "キススライサーの内部モデル表記は最低でもこの解像度がある"
+
+msgid "Keep-Warm"
+msgstr "暖かく保つ"
+
+msgid "Languages"
+msgstr "言語"
+
+msgid "Layer Thickness [mm]"
+msgstr "層の厚 [mm]"
+
+msgid "Limit Increase / Layer"
+msgstr "制限　増加／層"
+
+msgid ""
+"Limit the Extruder to not deliver material above this volumetric flow rate "
+"(path thickness * width * head_speed) by slowing down both the head speed "
+"and the flow rate if necessary."
+msgstr ""
+"! 必要に応じてヘッドスピードと流速を落とすことによって、この流量を超えないよ"
+"うにエクストルーダーを制限する（パスの厚さ*幅* ヘッドスピード）"
+
+msgid ""
+"Limit the Extruder to not deliver material below this volumetric flow rate "
+"(path thickness * width * head_speed) by speeding up both the head speed and "
+"the flow rate if necessary."
+msgstr ""
+"必要に応じてヘッドスピードと流速を上げることによって、この流量（パスの厚さ*幅"
+"* ヘッドスピード）より少なく材料を射出しないようにエクストルーダーを制限しま"
+"す。"
+
+msgid "Load a Language File"
+msgstr "言語ファイルを読み込む"
+
+msgid "Loop / Solid Infill Overlap"
+msgstr "ループ/ソリッド・インフィルの重なり"
+
+msgid "Loops"
+msgstr "ループ"
+
+msgid "Loops go from Inside to Perimeter"
+msgstr "ループは内側から外側に周回する"
+
+msgid "Loops:  %1.2f [mm/s]<LF>Solid:  %1.2f [mm/s]<LF>Sparse: %1.2f [mm/s]"
+msgstr "ループ：%1.2f [mm/s]<LF>Solid:  %1.2f [mm/s]<LF>Sparse: %1.2f [mm/s]"
+
+msgid "Main"
+msgstr "メイン"
+
+msgid "Mark Path Start/Stop"
+msgstr "パスをマーク　開始/停止"
+
+msgid "Material"
+msgstr "材料"
+
+msgid "Material Change Warning (if > 1 extruder)"
+msgstr "愛量変更の警告（もしエクストルーダー>1）"
+
+msgid "Material loaded into extruder 3"
+msgstr "エクストルーダー3に入れる材料"
+
+msgid "Max [mm^3/s]"
+msgstr "最大[mm^3/s]"
+
+msgid "Maximum height of a print"
+msgstr "最大プリント高さ"
+
+msgid "Maximum speed to travel while extruding the 1st layer."
+msgstr "１層目の移動時の最高速度"
+
+msgid "Mesh Error Key"
+msgstr "メッシュエラーキー"
+
+msgid "Min Jump[mm]"
+msgstr "最小　ジャンプ[mm]"
+
+msgid "Min Layer [s]"
+msgstr "最小　層　[s]"
+
+msgid "Min [mm^3/s]"
+msgstr "最小[mm^3/s]"
+
+msgid "Mirror X axis"
+msgstr "Ｘ軸にミラー対称"
+
+msgid "Mirror Y axis"
+msgstr "Ｙ軸にミラー対称"
+
+msgid "Mirror Z axis"
+msgstr "Ｚ軸にミラー対称"
+
+msgid "Models"
+msgstr "モデル"
+
+msgid "Models+Paths"
+msgstr "モデル＋パス"
+
+msgid ""
+"No sheath will be generated above this height [mm].  Make < 0 to disable the "
+"limit."
+msgstr "この高さ[mm]を超えたシースは生成されない。< 0がリミットを無効にする。"
+
+msgid ""
+"No support will be generated above this height [mm].  Make < 0 to disable "
+"the limit."
+msgstr ""
+"この高さ[mm]を超えるとサポートは生成されない。< 0がリミットを無効にする。"
+
+msgid "Number of Extruders"
+msgstr "エクストルーダー数"
+
+msgid "Number of Loops"
+msgstr "ループ数"
+
+msgid "Object"
+msgstr "オブジェクト"
+
+msgid "Open STL Model"
+msgstr "STLモデルを開く"
+
+msgid "Oversample Resolution [mm]"
+msgstr "オーバーサンプル解像度 [mm]"
+
+msgid "Path Color Key"
+msgstr "パスの配色"
+
+msgid "Path%"
+msgstr "パス%"
+
+msgid "Paths"
+msgstr "パス"
+
+msgid ""
+"Perim->in gives better final dimensions, enabling this gives better "
+"overhangs."
+msgstr "! オーバーハングの場合、外縁部を内側から吐出を行うと寸法精度が良くなる"
+
+msgid "Perimeter"
+msgstr "外縁部"
+
+msgid "Physical<LF>RAM [MB]"
+msgstr "フィジカル<LF>RAM [MB]"
+
+msgid "Post-Process"
+msgstr "プロセス後"
+
+msgid "Precise diameter of the filament"
+msgstr "フィラメントの正確な直径"
+
+msgid "Preferences"
+msgstr "設定"
+
+msgid "Prepends machine-dependent defaults into the G-code includes."
+msgstr "! G−コードに追加した機会のデフォルトを含む"
+
+msgid "Preview On Open STL"
+msgstr "オープンSTLでプレビューする"
+
+msgid "Prime"
+msgstr "押し戻し"
+
+msgid "Prime Pillar"
+msgstr "プライムピラー"
+
+msgid "Printer"
+msgstr "プリンター"
+
+msgid "Quickstart Guide"
+msgstr "クイックスタートガイド"
+
+msgid "Quit KISSlicer"
+msgstr "KISSlicer を終了"
+
+msgid "RAM Warning [MB]"
+msgstr "RAM警告 [MB]"
+
+msgid "Raft"
+msgstr "ラフト"
+
+msgid "Randomly spread the start-point of each loop over this angle"
+msgstr "各ループの開始点をこの角度間で無作為に分散する"
+
+msgid "Remove (all copies of) this model from the build"
+msgstr "このモデル（の全てのコピー）をこのビルドから削除"
+
+msgid "Reset"
+msgstr "リセット"
+
+msgid "Reset the veiw to be centered on the build bed"
+msgstr "ビューがビルドベッドの中心になるようにリセット"
+
+msgid "Reset to Default"
+msgstr "デフォルトにリセットする"
+
+msgid "Restore original orientation"
+msgstr "元の向きに戻す"
+
+msgid "Revert to English"
+msgstr "英語に戻す"
+
+msgid "Revert to original height"
+msgstr "元の高さに戻す"
+
+msgid ""
+"Rotate the part around the vertical axis<LF>(Set degrees directly or use "
+"buttons)"
+msgstr "パーツを縦軸の周りに回転させる<LF>(直接角度をセットまたはボタンを使用)"
+
+msgid "Save Packed STL"
+msgstr "パックドSTL を保存"
+
+msgid "Save Reference Language File"
+msgstr "言語設定ファイルを保存"
+
+msgid "Save the G-code to a file"
+msgstr "G-コードファイルを保存"
+
+msgid "Scale by X"
+msgstr "Ｘ軸を基準にスケール"
+
+msgid "Scale so the max height is this"
+msgstr "最大高さがこれになるように設定する"
+
+msgid "Select if the Z value matches the G-code or the Model"
+msgstr "もしZ値がG−コードまたはモデルの値と一致すれば選択"
+
+msgid "Select the color of this filament"
+msgstr "このフィラメントの色を選択"
+
+msgid "Select what kind of sparse infill you want"
+msgstr "スパースインフィルの種類を選択する"
+
+msgid ""
+"Select your experience level...setings more advanced than this will be "
+"disabled"
+msgstr "経験レベルを選択…このレベル以上の設定は無効になる"
+
+msgid "Selected Printer profile"
+msgstr "プリンターのプロファイルを選択"
+
+msgid "Selected Style profile"
+msgstr "スタイルのプロファイルを選択します"
+
+msgid ""
+"Set head to this temp when not extruding...less energy and ooze ~65% of the "
+"main temp is a good rule of thumb"
+msgstr ""
+"射出してない時のヘッドの温度を設定します。少エネルギーで漏れ出ない、メイン温"
+"度の65%が目安。"
+
+msgid "Settings Level"
+msgstr "設定レベル"
+
+msgid "Sheath Main<LF>Support"
+msgstr "シース・メイン<LF>サポート"
+
+msgid "Sheath<LF>Z-Roof [mm]"
+msgstr "シース<LF>Z-ルーフ[mm]"
+
+msgid ""
+"Sheathed Support has a perimeter around the sparse support base.  This "
+"strengthes the base support, but is very hard to remove if support is "
+"*inside* a complex model."
+msgstr ""
+"! 希薄なサポートベースの周りにシースドサポートがある。これはベースサポートを"
+"強化するが、もしサポートが複雑なモデルの内部にある場合は除去するのは難しい。"
+
+msgid "Show Settings"
+msgstr "設定画面を表示"
+
+msgid "Show the layer's paths in process"
+msgstr "各層のパスの経過を見る"
+
+msgid "Show the settings tabs"
+msgstr "設定タブを表示する"
+
+msgid "Shows only a single layer's paths, with an orthogonal projection"
+msgstr "! 垂直に突出する１層のパスだけを表示"
+
+msgid "Shows only the 3D models"
+msgstr "３Ｄモデルのみ表示"
+
+msgid "Shows the models as transparent, with a layer's paths inside"
+msgstr "! 透明なモデルと中に層のパスを表示"
+
+msgid "Skin Thickness [mm]"
+msgstr "スキンの厚さ [mm]"
+
+msgid "Slice && Save (get filename before slice)"
+msgstr "スライス&&保存（スライスする前にファイル名を獲得）"
+
+msgid "Solid Infill<LF>Support*"
+msgstr "ソリッド・インフィル<LF>サポート*"
+
+msgid ""
+"Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is "
+"forced to M101/3 internally for BfB printers"
+msgstr ""
+"! トリガーデストリングのために M101/3 または G10/1 tを使用するファームウェア"
+"の種類もある。注意：BfBプリンターの内部で強制的にM101/3をする"
+
+msgid ""
+"Sparse Infill and Support are extruded every N layers (making them Stacked "
+"Sparse Infill and Stacked Support...PRO only)"
+msgstr "スパース・インフィルとサポートはN層ごとに射出される（"
+
+msgid "Sparse Infill*"
+msgstr "スパース・インフィル*"
+
+msgid "Speed [mm/s]"
+msgstr "速度 [mm/s]"
+
+msgid "Speed of the head while extruding solid infill and support paths"
+msgstr "ソリッド・インフィルとサポートパスを射出する際のヘッド速度"
+
+msgid "Speed of the head while extruding sparse infill"
+msgstr "スパース・インフィルを射出する際のヘッド速度"
+
+msgid "Speed of the head while extruding the perimeter"
+msgstr "外縁部を射出してる際のヘッド速度"
+
+msgid "Speed of the head while not extruding."
+msgstr "射出しない時のヘッドスピード"
+
+msgid "Stacked Sparse Infill and<LF>Stacked Support Layers"
+msgstr "スパース・インフィルの積み上げと<LF>積み上げたサポート層"
+
+msgid "Stop the current slicing operation"
+msgstr "スライスを停止します"
+
+msgid "Style"
+msgstr "スタイル"
+
+msgid "Suck"
+msgstr "吸引"
+
+msgid "Support"
+msgstr "サポート"
+
+msgid "Support %1.0f [deg]"
+msgstr "サポート%1.0f [deg]"
+
+msgid "Support Angle"
+msgstr "サポート角度"
+
+msgid "Support<LF>Z-Roof [mm]"
+msgstr "サポート<LF>Z-ルーフ[mm]"
+
+msgid "Temperature of the extruder while extruding"
+msgstr "射出時のエクストルーダーの温度"
+
+msgid ""
+"Temperature of the extruder while extruding the first layer onto the bed.  "
+"Warm it up a bit for better stick."
+msgstr "1層目のエクストルーダーの温度。より良いくっつきのために少し暖める。"
+
+msgid "The 1st layer max speed limit will increase by this amount every layer"
+msgstr "! 一層目の最高速度制限が各層でこの量を増加します"
+
+msgid ""
+"The Prime Pillar adds a small single-walled cylinder, good for cooling small "
+"parts, priming extruders every layer (especially for multi-head prints)"
+msgstr ""
+"プライムピラーは小さい、一重壁の円筒を加える。これは小さいパーツを冷ます時や"
+"エクストルーダーを各層でプライムする時（特にヘッドが複数のプリンター）で役立"
+"つ。"
+
+msgid "The Z value of the layer to display"
+msgstr "表示する層のZ値"
+
+msgid ""
+"The fan will only be enabled once the head is this distance from the bed. "
+"(Note: KS compensates for Z-offset)"
+msgstr ""
+"ファンがベッドからこの距離になって初めて稼働可能になる。（注意：KSはZ−オフ"
+"セットを補う）"
+
+msgid ""
+"The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be "
+"approximated by alternating FanOn & FanOff commands."
+msgstr ""
+"! ファームウェアはファンPWMコントロールコードを受信できる。チェックされてない"
+"場合、ファンオンとファンオフを交互にコマンドすることによって調節される。"
+
+msgid ""
+"The nominal flowrate is calculated based on path and extruder settings, but "
+"this can compensate for small material differences"
+msgstr ""
+"流出速度はパスとエクストルーダーの設定に基づいて計算されるが、これは材料の差"
+"を補うことができる。"
+
+msgid "The number of Extruders on this printer"
+msgstr "このプリンタのエクストルーダー数"
+
+msgid ""
+"The number of layers before inserting the 'N Layers' G-code (0 disables)"
+msgstr "'N 層' G-code (0 で無効になる)が入力される前の層の数"
+
+msgid "The number of path loops around the perimeter"
+msgstr "外縁のパス・ループの数"
+
+msgid ""
+"The thickness of each slice ('ply') of plastic extruded. This should be <= "
+"Extrusion Width"
+msgstr ""
+"射出されたプラスチックの各スライス（プライ）の厚さ。エクストルージョン幅以下"
+"になるはず。"
+
+msgid "Theta"
+msgstr "シータ"
+
+msgid "Total physical RAM in the system"
+msgstr "システム内の総フィジカルRAM"
+
+msgid "Transform axes"
+msgstr "軸を変換する"
+
+msgid "Translate Tooltips Only"
+msgstr "ツールチップのみ翻訳"
+
+msgid "Trigger [mm]"
+msgstr "トリガ ー[mm]"
+
+msgid "Use Unique Filenames"
+msgstr "特殊なファイル名を使用"
+
+msgid "Used to estimate extruder warming and cooling times"
+msgstr "エクストルーダーの暖め/冷ますのに必要な時間を予測するのに使用"
+
+msgid ""
+"Usually leave this at 1.  You can change it to account for new gear ratios "
+"or such"
+msgstr ""
+"通常は1で、このままにしておきます。新しいギア比に変更した場合、変更することが"
+"できます。"
+
+msgid "Warm Time"
+msgstr "加熱時間"
+
+msgid "What type of firmware does this printer use?"
+msgstr "このプリンタはどのタイプのファームウェアを使用しますか？"
+
+msgid ""
+"While extruding Loops, Perimeter, and Crowning set the fan to this Duty "
+"Cycle %"
+msgstr ""
+"ループ、外縁、クラウニングを射出中のファンのヂューティーサイクル（％）を設定"
+"します"
+
+msgid "While extruding everything else set the fan to this Duty Cycle %"
+msgstr "射出中のファンのヂューティーサイクル（％）を設定します"
+
+msgid ""
+"Width of the extruded path (nozzle dia. is a good initial value). This "
+"should be > Layer Thickness"
+msgstr ""
+"射出パスの幅（初期値をノズル直径にすると良い）。これはパスの厚さより大きくな"
+"るべき。"
+
+msgid ""
+"Will make the solid skin of the model this thick (all surfaces: top, sides, "
+"bottom)"
+msgstr "モデルの表面をこの太さにする（全表面：上、横、下）"
+
+msgid "Wipe"
+msgstr "ワイプ"
+
+msgid "Wizards"
+msgstr "ウィザード"
+
+msgid "X"
+msgstr "X"
+
+msgid "X => Up"
+msgstr "Ｘ方向に起こす"
+
+msgid "X,Y Travel Speed"
+msgstr "X,Y 移動速度"
+
+msgid "XY Accel [mm/s^2]"
+msgstr "ＸＹアクセル [mm/s^2]"
+
+msgid "Y"
+msgstr "Y"
+
+msgid "Y => Up"
+msgstr "Ｙ方向に起こす"
+
+msgid "Z"
+msgstr "Z"
+
+msgid "Z Offset [mm]"
+msgstr "Z オフセット[mm]"
+
+msgid "Z value"
+msgstr "Z値"
+
+msgid "Z-Settle [mm]"
+msgstr "Z-降下 [mm]"
+
+msgid "Z-Speed"
+msgstr "Z-速度"
+
+msgid "Z-bed / Z-head travel speed"
+msgstr "Ｚ-ベッド／Ｚ-ヘッドの移動速度"
+
+msgid "Z-lift [mm]"
+msgstr "Z-リフト[mm]"
+
+msgid "[*] N<LF>Layers"
+msgstr "[*] N<LF>層"
+
+msgid "[Precision: %1.0f%%]"
+msgstr "[精度: %1.0f%%]"
+
+msgid ""
+"[Slice] will generate the G-code paths, and [Save] will export them.  Many "
+"settings will not trigger a reslice as they affect only computations that "
+"happen on export."
+msgstr ""
+"! [スライス]はGコードパスを生成し、[保存]はエクスポートする。エクスポートの計"
+"算しか影響されないため、多くの設定は再スライスをトリガーしない。"
+
+msgid ""
+"overshoot then return on Z moves (so last move is against gravity...removes "
+"slop), good for printers where the bed moves down (instead of head moving up)"
+msgstr ""
+"オーバーシュートしてZムーブでリターンする（最後のムーブが重力に逆らうように…"
+"スロップ除去）、（ヘッドが上に移動するのではなく）ベッドが下に移動するプリン"
+"ターで役立つ"

@@ -1,0 +1,1107 @@
+#.  KISSlicer Translation File
+#.  - Thank you for your help!!
+#.  - Save this file as 'KISSlicer_[your language code].po'
+#.  - Fill in the msgstr values with translations of the matching msgid value
+#.  - Leave any characters you do not recognize
+#.  - Any translation left blank will default to the original English
+#.  - You can use standard gettext tools (like Poedit) to create a .po file
+#.
+#.  - Please enter 'XYZ Translation by [your name(s)]'
+msgid "_Translation_By_"
+msgstr ""
+
+#.  Widget
+msgid "$ / cm^3"
+msgstr ""
+
+#.  Tooltip for '$ / cm^3'
+msgid "Cost per cm^3, use whatever currency type you wish"
+msgstr ""
+
+#.  Widget
+msgid "$ / hour"
+msgstr ""
+
+#.  Tooltip for '$ / hour'
+msgid "Cost of running this machine for one hour"
+msgstr ""
+
+#.  Widget
+msgid "&Open"
+msgstr ""
+
+#.  Tooltip for '&Open'
+msgid "Click to add models"
+msgstr ""
+
+#.  Widget
+msgid "&Save"
+msgstr ""
+
+#.  Tooltip for '&Save'
+msgid "Save the G-code to a file"
+msgstr ""
+
+#.  Widget
+msgid "&Slice"
+msgstr ""
+
+#.  Tooltip for '&Slice'
+msgid "[Slice] will generate the G-code paths, and [Save] will export them.  Many settings will not trigger a reslice as they affect only computations that happen on export."
+msgstr ""
+
+#.  Widget
+msgid "&Stop"
+msgstr ""
+
+#.  Tooltip for '&Stop'
+msgid "Stop the current slicing operation"
+msgstr ""
+
+#.  Widget
+msgid "..."
+msgstr ""
+
+#.  Tooltip for '...'
+msgid "Choose the Bed STL Model"
+msgstr ""
+
+#.  Widget
+msgid "0.0"
+msgstr ""
+
+#.  Tooltip for '0.0'
+msgid "The Z value of the layer to display"
+msgstr ""
+
+#.  Widget
+msgid "1st Layer Max Speed"
+msgstr ""
+
+#.  Tooltip for '1st Layer Max Speed'
+msgid "Maximum speed to travel while extruding the 1st layer."
+msgstr ""
+
+#.  Menu Item
+msgid "3D Background"
+msgstr ""
+
+#.  Widget
+msgid "@2> Calculate"
+msgstr ""
+
+#.  Tooltip for '@2> Calculate'
+msgid "Calculate the cost per cm^3"
+msgstr ""
+
+#.  Widget
+msgid "@8<"
+msgstr ""
+
+#.  Tooltip for '@8<'
+msgid "Force any settings above the 'Settings Level' to use defaults"
+msgstr ""
+
+#.  Widget
+msgid "@< Fast             Precise@>"
+msgstr ""
+
+#.  Tooltip for '@< Fast             Precise@>'
+msgid "Controls the print speed (using the Printer profile's fast and slow speed settings)."
+msgstr ""
+
+#.  Menu Item
+msgid "@< Off [Support: %s] On@>"
+msgstr ""
+
+#.  Widget
+msgid "@< Off [Support]  Dense@>"
+msgstr ""
+
+#.  Tooltip for '@< Off [Support]  Dense@>'
+msgid "Controls the density of the main support"
+msgstr ""
+
+#.  Menu Item
+msgid "About"
+msgstr ""
+
+#.  Menu Item
+msgid "All Models"
+msgstr ""
+
+#.  Menu Item
+msgid "Angle"
+msgstr ""
+
+#.  Menu Item
+msgid "Auto-Rotate For Packing"
+msgstr ""
+
+#.  Widget
+msgid "Axis"
+msgstr ""
+
+#.  Tooltip for 'Axis'
+msgid "E is standard, Mach3 uses A B C"
+msgstr ""
+
+#.  Menu Item
+msgid "Background"
+msgstr ""
+
+#.  Widget
+msgid "Bed"
+msgstr ""
+
+#.  Tooltip for 'Bed'
+msgid "If you have a heated bed, you can use the <BED> token in the G-code includes"
+msgstr ""
+
+#.  Widget
+msgid "Bed Center [mm]  X"
+msgstr ""
+
+#.  Tooltip for 'Bed Center [mm]  X'
+msgid "KISSlicer treats the center of the bed as 0,0 but many printers do not.  Enter the X coordinate of the center of the bed (KISSlicer will offset the output G-code)"
+msgstr ""
+
+#.  Menu Item
+msgid "Bed Level && Z"
+msgstr ""
+
+#.  Widget
+msgid "Bed Roughness [mm]"
+msgstr ""
+
+#.  Tooltip for 'Bed Roughness [mm]'
+msgid "Bed Z_max - Z_min: 1st layer thickness is fattened to compensate"
+msgstr ""
+
+#.  Widget
+msgid "Bed STL Model"
+msgstr ""
+
+#.  Tooltip for 'Bed STL Model'
+msgid "Chose a STL model to represent the printer's bed (make sure the origin coincides with where the printer would deposit plastic at 0,0)"
+msgstr ""
+
+#.  Widget
+msgid "Bed Size [mm]  X"
+msgstr ""
+
+#.  Tooltip for 'Bed Size [mm]  X'
+msgid "Available print width of the bed."
+msgstr ""
+
+#.  Widget
+msgid "Center"
+msgstr ""
+
+#.  Tooltip for 'Center'
+msgid "Center all models on the bed"
+msgstr ""
+
+#.  Menu Item
+msgid "Change Registration Key"
+msgstr ""
+
+#.  Widget
+msgid "Color"
+msgstr ""
+
+#.  Tooltip for 'Color'
+msgid "Select the color of this filament"
+msgstr ""
+
+#.  Menu Item
+msgid "Color Scheme"
+msgstr ""
+
+#.  Widget
+msgid "Cool"
+msgstr ""
+
+#.  Tooltip for 'Cool'
+msgid "If slowing a layer to reach 'Min Layer [s]', make sure the fan is at least at this Duty Cycle %"
+msgstr ""
+
+#.  Widget
+msgid "Copy<LF>Profile"
+msgstr ""
+
+#.  Tooltip for 'Copy<LF>Profile'
+msgid "Copy this profile into a new one"
+msgstr ""
+
+#.  Widget
+msgid "Count"
+msgstr ""
+
+#.  Tooltip for 'Count'
+msgid "How many to print"
+msgstr ""
+
+#.  Widget
+msgid "Crowning Threshold [mm]<LF>(small gap filler segments)"
+msgstr ""
+
+#.  Tooltip for 'Crowning Threshold [mm]<LF>(small gap filler segments)'
+msgid "Crowning tries to fill in small gaps and thin walls.  Crowning paths must be longer than this to be kept.  Negative values disable crowning. 1mm is a good starting value."
+msgstr ""
+
+#.  Widget
+msgid "De-String"
+msgstr ""
+
+#.  Tooltip for 'De-String'
+msgid "Enables a prime at the start of a path and a retract at the end"
+msgstr ""
+
+#.  Widget
+msgid "Defaults@>"
+msgstr ""
+
+#.  Tooltip for 'Defaults@>'
+msgid "Prepends machine-dependent defaults into the G-code includes."
+msgstr ""
+
+#.  Menu Item
+msgid "Delete"
+msgstr ""
+
+#.  Widget
+msgid "Delete<LF>Profile"
+msgstr ""
+
+#.  Tooltip for 'Delete<LF>Profile'
+msgid "Delete the current profil"
+msgstr ""
+
+#.  Widget
+msgid "Depth"
+msgstr ""
+
+#.  Tooltip for 'Depth'
+msgid "Depth scale of the seam crossover"
+msgstr ""
+
+#.  Widget
+msgid "Diameter [mm]"
+msgstr ""
+
+#.  Tooltip for 'Diameter [mm]'
+msgid "Precise diameter of the filament"
+msgstr ""
+
+#.  Menu Item
+msgid "Disable 3D View on Slice"
+msgstr ""
+
+#.  Menu Item
+msgid "Enter Product Key"
+msgstr ""
+
+#.  Menu Item
+msgid "Enter Registration Key"
+msgstr ""
+
+#.  Menu Item
+msgid "Extruder Flow"
+msgstr ""
+
+#.  Widget
+msgid "Extrusion Width [mm]"
+msgstr ""
+
+#.  Tooltip for 'Extrusion Width [mm]'
+msgid "Width of the extruded path (nozzle dia. is a good initial value). This should be > Layer Thickness"
+msgstr ""
+
+#.  Widget
+msgid "Fan Off"
+msgstr ""
+
+#.  Tooltip for 'Fan Off'
+msgid "G-code to turn of the fan, typically M107 but MakerBot uses M127"
+msgstr ""
+
+#.  Widget
+msgid "Fan On"
+msgstr ""
+
+#.  Tooltip for 'Fan On'
+msgid "G-code to turn on the fan, typically M106 but MakerBot uses M126"
+msgstr ""
+
+#.  Widget
+msgid "Fan Z [mm]"
+msgstr ""
+
+#.  Tooltip for 'Fan Z [mm]'
+msgid "The fan will only be enabled once the head is this distance from the bed. (Note: KS compensates for Z-offset)"
+msgstr ""
+
+#.  Widget
+msgid "Fan can do PWM<LF>(e.g. 'M106 Snnn')"
+msgstr ""
+
+#.  Tooltip for 'Fan can do PWM<LF>(e.g. 'M106 Snnn')'
+msgid "The firmware accepts Fan PWM control codes.  If unchecked, Fan PWM will be approximated by alternating FanOn & FanOff commands."
+msgstr ""
+
+#.  Menu Item
+msgid "File"
+msgstr ""
+
+#.  Widget
+msgid "File Extension"
+msgstr ""
+
+#.  Tooltip for 'File Extension'
+msgid "Common values are bfb or gcode"
+msgstr ""
+
+#.  Widget
+msgid "Firmware Type"
+msgstr ""
+
+#.  Tooltip for 'Firmware Type'
+msgid "What type of firmware does this printer use?"
+msgstr ""
+
+#.  Widget
+msgid "First Layer"
+msgstr ""
+
+#.  Tooltip for 'First Layer'
+msgid "Temperature of the extruder while extruding the first layer onto the bed.  Warm it up a bit for better stick."
+msgstr ""
+
+#.  Widget
+msgid "Flow Tweak"
+msgstr ""
+
+#.  Tooltip for 'Flow Tweak'
+msgid "The nominal flowrate is calculated based on path and extruder settings, but this can compensate for small material differences"
+msgstr ""
+
+#.  Menu Item
+msgid "Foreground"
+msgstr ""
+
+#.  Widget
+msgid "Gain"
+msgstr ""
+
+#.  Tooltip for 'Gain'
+msgid "Usually leave this at 1.  You can change it to account for new gear ratios or such"
+msgstr ""
+
+#.  Widget
+msgid "Gap"
+msgstr ""
+
+#.  Tooltip for 'Gap'
+msgid "Horizontal Gap [mm] between the support and the object"
+msgstr ""
+
+#.  Widget
+msgid "Height"
+msgstr ""
+
+#.  Tooltip for 'Height'
+msgid "Scale so the max height is this"
+msgstr ""
+
+#.  Menu Item
+msgid "Help"
+msgstr ""
+
+#.  Menu Item
+msgid "Inch -> mm"
+msgstr ""
+
+#.  Widget
+msgid "Include Comments"
+msgstr ""
+
+#.  Tooltip for 'Include Comments'
+msgid "Adds comments to the G-code (very very helpful!)"
+msgstr ""
+
+#.  Widget
+msgid "Infill Density"
+msgstr ""
+
+#.  Tooltip for 'Infill Density'
+msgid "Density of the Sparse Infill and Stacked Sparse Infill (ratio is 1/whole_number)"
+msgstr ""
+
+#.  Widget
+msgid "Infill Extrusion Width [mm]"
+msgstr ""
+
+#.  Tooltip for 'Infill Extrusion Width [mm]'
+msgid "A good default is to make this the same as Extrusion Width; compared to the extrusion width: thinner reduces stress / warping, thicker improves bonding"
+msgstr ""
+
+#.  Widget
+msgid "Infill Style"
+msgstr ""
+
+#.  Tooltip for 'Infill Style'
+msgid "Select what kind of sparse infill you want"
+msgstr ""
+
+#.  Menu Item
+msgid "Infill: %1.1f%%  "
+msgstr ""
+
+#.  Menu Item
+msgid "Infill: Hollow"
+msgstr ""
+
+#.  Menu Item
+msgid "Infill: Vase  "
+msgstr ""
+
+#.  Widget
+msgid "Inflate<LF>Raft"
+msgstr ""
+
+#.  Tooltip for 'Inflate<LF>Raft'
+msgid "Inflate the raft (or skirt) by this many [mm] in all directions to stick better to the bed"
+msgstr ""
+
+#.  Widget
+msgid "Inflate<LF>Support"
+msgstr ""
+
+#.  Tooltip for 'Inflate<LF>Support'
+msgid "Inflate the support by this many [mm] in all directions (it can help strengthen undercut support)"
+msgstr ""
+
+#.  Widget
+msgid "Inset  Surface [mm]"
+msgstr ""
+
+#.  Tooltip for 'Inset  Surface [mm]'
+msgid "Adjust the surface inward (in X,Y plane).  This should be <= Extrusion Width / 2"
+msgstr ""
+
+#.  Widget
+msgid "Inside"
+msgstr ""
+
+#.  Tooltip for 'Inside'
+msgid "While extruding everything else set the fan to this Duty Cycle %"
+msgstr ""
+
+#.  Widget
+msgid "Interface"
+msgstr ""
+
+#.  Tooltip for 'Interface'
+msgid "Extruder for printing the top of the support just under the model"
+msgstr ""
+
+#.  Widget
+msgid "Jitterº"
+msgstr ""
+
+#.  Tooltip for 'Jitterº'
+msgid "Randomly spread the start-point of each loop over this angle"
+msgstr ""
+
+#.  Widget
+msgid "Keep-Warm"
+msgstr ""
+
+#.  Tooltip for 'Keep-Warm'
+msgid "Set head to this temp when not extruding...less energy and ooze ~65% of the main temp is a good rule of thumb"
+msgstr ""
+
+#.  Menu Item
+msgid "Languages"
+msgstr ""
+
+#.  Widget
+msgid "Layer Thickness [mm]"
+msgstr ""
+
+#.  Tooltip for 'Layer Thickness [mm]'
+msgid "The thickness of each slice ('ply') of plastic extruded. This should be <= Extrusion Width"
+msgstr ""
+
+#.  Widget
+msgid "Limit Increase / Layer"
+msgstr ""
+
+#.  Tooltip for 'Limit Increase / Layer'
+msgid "The 1st layer max speed limit will increase by this amount every layer"
+msgstr ""
+
+#.  Menu Item
+msgid "Load a Language File"
+msgstr ""
+
+#.  Widget
+msgid "Loop / Solid Infill Overlap"
+msgstr ""
+
+#.  Tooltip for 'Loop / Solid Infill Overlap'
+msgid "Controls how close the solid infill gets to the innermost loop (1.0 for maximum overlap)"
+msgstr ""
+
+#.  Widget
+msgid "Loops"
+msgstr ""
+
+#.  Tooltip for 'Loops'
+msgid "While extruding Loops, Perimeter, and Crowning set the fan to this Duty Cycle %"
+msgstr ""
+
+#.  Widget
+msgid "Loops go from Inside to Perimeter"
+msgstr ""
+
+#.  Tooltip for 'Loops go from Inside to Perimeter'
+msgid "Perim->in gives better final dimensions, enabling this gives better overhangs."
+msgstr ""
+
+#.  Menu Item
+msgid "Loops:  %1.2f [mm/s]<LF>Solid:  %1.2f [mm/s]<LF>Sparse: %1.2f [mm/s]"
+msgstr ""
+
+#.  Widget
+msgid "Main"
+msgstr ""
+
+#.  Tooltip for 'Main'
+msgid "Temperature of the extruder while extruding"
+msgstr ""
+
+#.  Widget
+msgid "Mark Path Start/Stop"
+msgstr ""
+
+#.  Tooltip for 'Mark Path Start/Stop'
+msgid "Some firmware types use M101/3 or G10/1 to trigger destring.  Note: this is forced to M101/3 internally for BfB printers"
+msgstr ""
+
+#.  Widget
+msgid "Material"
+msgstr ""
+
+#.  Tooltip for 'Material'
+msgid "Material loaded into extruder 3"
+msgstr ""
+
+#.  Menu Item
+msgid "Material Change Warning (if > 1 extruder)"
+msgstr ""
+
+#.  Widget
+msgid "Max [mm^3/s]"
+msgstr ""
+
+#.  Tooltip for 'Max [mm^3/s]'
+msgid "Limit the Extruder to not deliver material above this volumetric flow rate (path thickness * width * head_speed) by slowing down both the head speed and the flow rate if necessary."
+msgstr ""
+
+#.  Menu Item
+msgid "Mesh Error Key"
+msgstr ""
+
+#.  Widget
+msgid "Min Jump[mm]"
+msgstr ""
+
+#.  Tooltip for 'Min Jump[mm]'
+msgid "Any jump < this threshold will not wipe (or destring on 5D), so 0 would never disable a destring/wipe"
+msgstr ""
+
+#.  Widget
+msgid "Min Layer [s]"
+msgstr ""
+
+#.  Tooltip for 'Min Layer [s]'
+msgid "If a layer would have been quicker than this, the layer is slowed down"
+msgstr ""
+
+#.  Widget
+msgid "Min [mm^3/s]"
+msgstr ""
+
+#.  Tooltip for 'Min [mm^3/s]'
+msgid "Limit the Extruder to not deliver material below this volumetric flow rate (path thickness * width * head_speed) by speeding up both the head speed and the flow rate if necessary."
+msgstr ""
+
+#.  Menu Item
+msgid "Mirror X axis"
+msgstr ""
+
+#.  Menu Item
+msgid "Mirror Y axis"
+msgstr ""
+
+#.  Menu Item
+msgid "Mirror Z axis"
+msgstr ""
+
+#.  Widget
+msgid "Models"
+msgstr ""
+
+#.  Tooltip for 'Models'
+msgid "Shows only the 3D models"
+msgstr ""
+
+#.  Widget
+msgid "Models+Paths"
+msgstr ""
+
+#.  Tooltip for 'Models+Paths'
+msgid "Shows the models as transparent, with a layer's paths inside"
+msgstr ""
+
+#.  Widget
+msgid "Number of Extruders"
+msgstr ""
+
+#.  Tooltip for 'Number of Extruders'
+msgid "The number of Extruders on this printer"
+msgstr ""
+
+#.  Widget
+msgid "Number of Loops"
+msgstr ""
+
+#.  Tooltip for 'Number of Loops'
+msgid "The number of path loops around the perimeter"
+msgstr ""
+
+#.  Widget
+msgid "Object"
+msgstr ""
+
+#.  Tooltip for 'Object'
+msgid "Extruder for printing objects"
+msgstr ""
+
+#.  Menu Item
+msgid "Open STL Model"
+msgstr ""
+
+#.  Widget
+msgid "Oversample Resolution [mm]"
+msgstr ""
+
+#.  Tooltip for 'Oversample Resolution [mm]'
+msgid "KISSlicer's internal model representation will have at least this resolution"
+msgstr ""
+
+#.  Menu Item
+msgid "Path Color Key"
+msgstr ""
+
+#.  Widget
+msgid "Path%"
+msgstr ""
+
+#.  Tooltip for 'Path%'
+msgid "Show the layer's paths in process"
+msgstr ""
+
+#.  Widget
+msgid "Paths"
+msgstr ""
+
+#.  Tooltip for 'Paths'
+msgid "Shows only a single layer's paths, with an orthogonal projection"
+msgstr ""
+
+#.  Widget
+msgid "Perimeter"
+msgstr ""
+
+#.  Tooltip for 'Perimeter'
+msgid "Speed of the head while extruding the perimeter"
+msgstr ""
+
+#.  Widget
+msgid "Physical<LF>RAM [MB]"
+msgstr ""
+
+#.  Tooltip for 'Physical<LF>RAM [MB]'
+msgid "Total physical RAM in the system"
+msgstr ""
+
+#.  Widget
+msgid "Post-Process"
+msgstr ""
+
+#.  Tooltip for 'Post-Process'
+msgid "Invoke a post process script on <FILE>"
+msgstr ""
+
+#.  Menu Item
+msgid "Preferences"
+msgstr ""
+
+#.  Menu Item
+msgid "Preview On Open STL"
+msgstr ""
+
+#.  Widget
+msgid "Prime"
+msgstr ""
+
+#.  Tooltip for 'Prime'
+msgid "How many mm to prime before starting a path (uses M227 on BfB printers)"
+msgstr ""
+
+#.  Widget
+msgid "Prime Pillar"
+msgstr ""
+
+#.  Tooltip for 'Prime Pillar'
+msgid "The Prime Pillar adds a small single-walled cylinder, good for cooling small parts, priming extruders every layer (especially for multi-head prints)"
+msgstr ""
+
+#.  Widget
+msgid "Printer"
+msgstr ""
+
+#.  Tooltip for 'Printer'
+msgid "Selected Printer profile"
+msgstr ""
+
+#.  Menu Item
+msgid "Quickstart Guide"
+msgstr ""
+
+#.  Menu Item
+msgid "Quit KISSlicer"
+msgstr ""
+
+#.  Widget
+msgid "RAM Warning [MB]"
+msgstr ""
+
+#.  Tooltip for 'RAM Warning [MB]'
+msgid "If the slicing operation *might* exceed this threshold, a warning will be shown"
+msgstr ""
+
+#.  Widget
+msgid "Raft"
+msgstr ""
+
+#.  Tooltip for 'Raft'
+msgid "Extruder for printing the raft"
+msgstr ""
+
+#.  Widget
+msgid "Reset"
+msgstr ""
+
+#.  Tooltip for 'Reset'
+msgid "Reset the veiw to be centered on the build bed"
+msgstr ""
+
+#.  Menu Item
+msgid "Reset to Default"
+msgstr ""
+
+#.  Menu Item
+msgid "Restore original orientation"
+msgstr ""
+
+#.  Menu Item
+msgid "Revert to English"
+msgstr ""
+
+#.  Menu Item
+msgid "Revert to original height"
+msgstr ""
+
+#.  Menu Item
+msgid "Save Packed STL"
+msgstr ""
+
+#.  Menu Item
+msgid "Save Reference Language File"
+msgstr ""
+
+#.  Menu Item
+msgid "Scale by X"
+msgstr ""
+
+#.  Widget
+msgid "Settings Level"
+msgstr ""
+
+#.  Tooltip for 'Settings Level'
+msgid "Select your experience level...setings more advanced than this will be disabled"
+msgstr ""
+
+#.  Widget
+msgid "Sheath<LF>Z-Roof [mm]"
+msgstr ""
+
+#.  Tooltip for 'Sheath<LF>Z-Roof [mm]'
+msgid "No sheath will be generated above this height [mm].  Make < 0 to disable the limit."
+msgstr ""
+
+#.  Widget
+msgid "Sheath Main<LF>Support"
+msgstr ""
+
+#.  Tooltip for 'Sheath Main<LF>Support'
+msgid "Sheathed Support has a perimeter around the sparse support base.  This strengthes the base support, but is very hard to remove if support is *inside* a complex model."
+msgstr ""
+
+#.  Widget
+msgid "Show Settings"
+msgstr ""
+
+#.  Tooltip for 'Show Settings'
+msgid "Show the settings tabs"
+msgstr ""
+
+#.  Widget
+msgid "Skin Thickness [mm]"
+msgstr ""
+
+#.  Tooltip for 'Skin Thickness [mm]'
+msgid "Will make the solid skin of the model this thick (all surfaces: top, sides, bottom)"
+msgstr ""
+
+#.  Menu Item
+msgid "Slice && Save (get filename before slice)"
+msgstr ""
+
+#.  Widget
+msgid "Solid Infill<LF>Support*"
+msgstr ""
+
+#.  Tooltip for 'Solid Infill<LF>Support*'
+msgid "Speed of the head while extruding solid infill and support paths"
+msgstr ""
+
+#.  Widget
+msgid "Sparse Infill*"
+msgstr ""
+
+#.  Tooltip for 'Sparse Infill*'
+msgid "Speed of the head while extruding sparse infill"
+msgstr ""
+
+#.  Widget
+msgid "Speed [mm/s]"
+msgstr ""
+
+#.  Tooltip for 'Speed [mm/s]'
+msgid "How fast to retract / prime for destring under 5D firmware."
+msgstr ""
+
+#.  Widget
+msgid "Stacked Sparse Infill and<LF>Stacked Support Layers"
+msgstr ""
+
+#.  Tooltip for 'Stacked Sparse Infill and<LF>Stacked Support Layers'
+msgid "Sparse Infill and Support are extruded every N layers (making them Stacked Sparse Infill and Stacked Support...PRO only)"
+msgstr ""
+
+#.  Widget
+msgid "Style"
+msgstr ""
+
+#.  Tooltip for 'Style'
+msgid "Selected Style profile"
+msgstr ""
+
+#.  Widget
+msgid "Suck"
+msgstr ""
+
+#.  Tooltip for 'Suck'
+msgid "How many mm to suck back after ending a path (uses M227 on BfB printers)"
+msgstr ""
+
+#.  Widget
+msgid "Support"
+msgstr ""
+
+#.  Tooltip for 'Support'
+msgid "Extruder for printing the main (lower) support"
+msgstr ""
+
+#.  Widget
+msgid "Support<LF>Z-Roof [mm]"
+msgstr ""
+
+#.  Tooltip for 'Support<LF>Z-Roof [mm]'
+msgid "No support will be generated above this height [mm].  Make < 0 to disable the limit."
+msgstr ""
+
+#.  Menu Item
+msgid "Support %1.0f [deg]"
+msgstr ""
+
+#.  Widget
+msgid "Support Angle"
+msgstr ""
+
+#.  Tooltip for 'Support Angle'
+msgid "Any surface of the model more than X degrees off vertical will get support."
+msgstr ""
+
+#.  Widget
+msgid "Theta"
+msgstr ""
+
+#.  Tooltip for 'Theta'
+msgid "Rotate the part around the vertical axis<LF>(Set degrees directly or use buttons)"
+msgstr ""
+
+#.  Menu Item
+msgid "Transform axes"
+msgstr ""
+
+#.  Menu Item
+msgid "Translate Tooltips Only"
+msgstr ""
+
+#.  Widget
+msgid "Trigger [mm]"
+msgstr ""
+
+#.  Tooltip for 'Trigger [mm]'
+msgid "Any jump > this threshold will force a wipe and destring, so a 0 would force a destring/wipe on all travels"
+msgstr ""
+
+#.  Menu Item
+msgid "Use Unique Filenames"
+msgstr ""
+
+#.  Widget
+msgid "Warm Time"
+msgstr ""
+
+#.  Tooltip for 'Warm Time'
+msgid "Used to estimate extruder warming and cooling times"
+msgstr ""
+
+#.  Widget
+msgid "Wipe"
+msgstr ""
+
+#.  Tooltip for 'Wipe'
+msgid "Before moving to a new region, back-tracks over the most recent path or continues over the loop by this distance.  Wipe must also be enabled in the selected Style"
+msgstr ""
+
+#.  Menu Item
+msgid "Wizards"
+msgstr ""
+
+#.  Widget
+msgid "X"
+msgstr ""
+
+#.  Tooltip for 'X'
+msgid "Remove (all copies of) this model from the build"
+msgstr ""
+
+#.  Menu Item
+msgid "X => Up"
+msgstr ""
+
+#.  Widget
+msgid "X,Y Travel Speed"
+msgstr ""
+
+#.  Tooltip for 'X,Y Travel Speed'
+msgid "Speed of the head while not extruding."
+msgstr ""
+
+#.  Widget
+msgid "XY Accel [mm/s^2]"
+msgstr ""
+
+#.  Tooltip for 'XY Accel [mm/s^2]'
+msgid "Acceleration of the print-head in X & Y, used for timing estimates"
+msgstr ""
+
+#.  Widget
+msgid "Y"
+msgstr ""
+
+#.  Tooltip for 'Y'
+msgid "KISSlicer treats the center of the bed as 0,0 but many printers do not.  Enter the Y coordinate of the center of the bed (KISSlicer will offset the output G-code)"
+msgstr ""
+
+#.  Menu Item
+msgid "Y => Up"
+msgstr ""
+
+#.  Widget
+msgid "Z"
+msgstr ""
+
+#.  Tooltip for 'Z'
+msgid "Maximum height of a print"
+msgstr ""
+
+#.  Widget
+msgid "Z Offset [mm]"
+msgstr ""
+
+#.  Tooltip for 'Z Offset [mm]'
+msgid "Add an offset to the output G-code's Z values"
+msgstr ""
+
+#.  Widget
+msgid "Z value"
+msgstr ""
+
+#.  Tooltip for 'Z value'
+msgid "Select if the Z value matches the G-code or the Model"
+msgstr ""
+
+#.  Widget
+msgid "Z-Settle [mm]"
+msgstr ""
+
+#.  Tooltip for 'Z-Settle [mm]'
+msgid "overshoot then return on Z moves (so last move is against gravity...removes slop), good for printers where the bed moves down (instead of head moving up)"
+msgstr ""
+
+#.  Widget
+msgid "Z-Speed"
+msgstr ""
+
+#.  Tooltip for 'Z-Speed'
+msgid "Z-bed / Z-head travel speed"
+msgstr ""
+
+#.  Widget
+msgid "Z-lift [mm]"
+msgstr ""
+
+#.  Tooltip for 'Z-lift [mm]'
+msgid "After a destring (if enabled), before a travel, lift the head by this height."
+msgstr ""
+
+#.  Widget
+msgid "[*] N<LF>Layers"
+msgstr ""
+
+#.  Tooltip for '[*] N<LF>Layers'
+msgid "The number of layers before inserting the 'N Layers' G-code (0 disables)"
+msgstr ""
+
+#.  Menu Item
+msgid "[Precision: %1.0f%%]"
+msgstr ""

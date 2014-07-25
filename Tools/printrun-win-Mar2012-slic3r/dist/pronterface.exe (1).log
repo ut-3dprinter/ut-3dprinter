@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "pronterface.py", line 1884, in <module>
+  File "pronterface.py", line 147, in __init__
+  File "pronterface.py", line 702, in popwindow
+  File "gviz.pyc", line 93, in __init__
+ZeroDivisionError: float division
+Traceback (most recent call last):
+  File "pronterface.py", line 1884, in <module>
+  File "pronterface.py", line 147, in __init__
+  File "pronterface.py", line 702, in popwindow
+  File "gviz.pyc", line 93, in __init__
+ZeroDivisionError: float division
