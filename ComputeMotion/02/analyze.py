@@ -125,7 +125,8 @@ def main(sparseness, l1, l2, r1, r2):
     #cube = np.array(cube)
     #ax.scatter(cube[0], cube[1], cube[2], c='w', marker='o', alpha=0.05)
 
-    plt.show()
+    #plt.show()
+    plt.savefig('can_move.png')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analyze about motion of parallel link')
