@@ -7,6 +7,7 @@
 with open('./sample_stldata/DD_carriage_for_atom.gcode', 'r') as f:
     lines = f.readlines()
 
+points = []
 for line in lines:
     line = line.strip()
     # first validation
@@ -40,4 +41,5 @@ for line in lines:
         for letter in 'XYZEF':
             if arg.startswith(letter):
                 point[letter] = float(arg[1:])
-    print point
+    points.append(point)
+    # print point
