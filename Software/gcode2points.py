@@ -114,6 +114,7 @@ def test_gcode2points(gcode_file):
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     utils.plot_3D(X, Y, Z)
+    utils.plot_3D_video(X, Y, Z)
 
 
 if __name__ == '__main__':
