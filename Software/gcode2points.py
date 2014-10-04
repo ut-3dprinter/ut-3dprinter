@@ -2,9 +2,9 @@
 # gcode2points.py
 #
 # Reference : http://reprap.org/wiki/G-code
+import utils
+
 import numpy
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 
 def get_points_from_gcode_file(gcode_file):
@@ -101,23 +101,19 @@ def get_interpolated_points(points):
 def gcode2points(gcode_file):
     points = get_points_from_gcode_file(gcode_file)
 
-    interpolated = get_interpolated_points(points)
+    points = get_interpolated_points(points)
 
-    return numpy.array(interpolated)
+    return points
 
 
 def test_gcode2points(gcode_file):
     Xs = gcode2points(gcode_file)
 
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
-    print "Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})" \
-        .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max())
+    print("Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})"
+          .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
-    fig = plt.figure()
-    ax = Axes3D(fig)
-    ax.scatter(X, Y, Z, c='b', marker='^', alpha=0.5)
-
-    plt.show()
+    utils.plot_3D(X, Y, Z)
 
 
 if __name__ == '__main__':
