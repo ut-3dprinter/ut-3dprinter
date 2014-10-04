@@ -1,7 +1,10 @@
 #-*- coding: utf-8 -*-
-# gcode2angle.py
+# gcode2points.py
 #
 # Reference : http://reprap.org/wiki/G-code
+import numpy
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 
 def get_points_from_gcode_file(gcode_file):
@@ -62,7 +65,7 @@ def get_interpolated_points(points):
 
     # linear interpolation from Point0 to Point1
     interpolated = []
-    for point in enumerate(points[2:]):
+    for point in points[2:]:
         # print 'start:', start, 'end:', end
 
         current = start
@@ -70,7 +73,7 @@ def get_interpolated_points(points):
         # move from start to end
         while True:
             # print 'current:', current
-            interpolated.append(current)
+            interpolated.append((current[0], current[1], current[2]-250))
 
             # decide how to move from current position
             for i in range(0, 3):
@@ -92,18 +95,32 @@ def get_interpolated_points(points):
         end[1] = point['Y'] if 'Y' in point else end[1]
         end[2] = point['Z'] if 'Z' in point else end[2]
 
-    return interpolated
+    return numpy.array(interpolated)
 
 
-def main():
-    gcode_file = './sample_stldata/DD_carriage_for_atom.gcode'
-
+def gcode2points(gcode_file):
     points = get_points_from_gcode_file(gcode_file)
 
     interpolated = get_interpolated_points(points)
 
-    print interpolated
+    return numpy.array(interpolated)
+
+
+def test_gcode2points(gcode_file):
+    Xs = gcode2points(gcode_file)
+
+    X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
+    print "Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})" \
+        .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max())
+
+    fig = plt.figure()
+    ax = Axes3D(fig)
+    ax.scatter(X, Y, Z, c='b', marker='^', alpha=0.5)
+
+    plt.show()
 
 
 if __name__ == '__main__':
-    main()
+    gcode_file = './sample_stldata/DD_carriage_for_atom.gcode'
+
+    test_gcode2points(gcode_file=gcode_file)
