@@ -8,10 +8,15 @@ $ python gcode2points.py
 ```
 
 ### 3D Printed 画像
+
 ![3dprinted](3dprinted.png)
 
+
 ### 3D Printing 動画
-![3dprinting](3dprinting.mp4)
+
+<video width="320" height="240" controls>
+  <source src="3dprinting.mp4" type="video/mp4">
+</video>
 
 
 ## Gcode → 線形補間した経路 → パラレルリンクの腕の角度
