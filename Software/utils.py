@@ -13,7 +13,7 @@ def plot_3D(X, Y, Z):
     fig = plt.figure()
     ax = Axes3D(fig)
     ax.scatter(X, Y, Z, c='b', marker='^', alpha=0.5)
-    plt.show()
+    plt.savefig('3dprinted.png')
 
 def update_lines(num, dataLines, lines) :
     for line, data in zip(lines, dataLines) :
@@ -24,8 +24,9 @@ def update_lines(num, dataLines, lines) :
 def plot_3D_video(X, Y, Z):
     fig = plt.figure()
     ax = p3.Axes3D(fig)
+
     data = [numpy.vstack((X, Y, Z))]
-    print data
+
     lines = [ax.plot(dat[0, 0:1], dat[1, 0:1], dat[2, 0:1])[0] for dat in data]
 
     # Setting the axes properties
@@ -35,14 +36,14 @@ def plot_3D_video(X, Y, Z):
     ax.set_ylabel('Y')
     ax.set_zlim3d([Z.min(), Z.max()])
     ax.set_zlabel('Z')
-    ax.set_title('3D Print')
+    ax.set_title('3D Printing')
 
     # Creating the Animation object
-    anim = animation.FuncAnimation(fig, update_lines, 10000,
+    anim = animation.FuncAnimation(fig, update_lines, len(X),
                                        fargs=(data, lines),
                                        interval=1, blit=False)
 
     mywriter = animation.FFMpegWriter()
     anim.save('3dprinting.mp4',writer=mywriter)
 
-    plt.show()
+    # plt.show()
