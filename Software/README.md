@@ -14,9 +14,7 @@ $ python gcode2points.py
 
 ### 3D Printing 動画
 
-<video width="320" height="240" controls>
-  <source src="3dprinting.mp4" type="video/mp4">
-</video>
+[![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/3DQpn81zP6k)
 
 
 ## Gcode → 線形補間した経路 → パラレルリンクの腕の角度
