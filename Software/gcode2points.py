@@ -2,7 +2,7 @@
 # gcode2points.py
 #
 # Reference : http://reprap.org/wiki/G-code
-import utils
+import pyutils.graph
 
 import numpy
 
@@ -113,8 +113,8 @@ def test_gcode2points(gcode_file):
     print("Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})"
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
-    utils.plot_3D(X, Y, Z)
-    utils.plot_3D_video(X, Y, Z)
+    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=False)
+    pyutils.graph.plot_3D_video(X, Y, Z, saveanime='3dprinting.mp4', show=True)
 
 
 if __name__ == '__main__':
