@@ -14,7 +14,7 @@ $ python gcode2points.py
 
 ### 3D Printing 動画
 
-[3D Printing](http://youtu.be/G-pFYOB0gJw)
+`3dprinting.mp4`
 
 
 ## Gcode → 線形補間した経路 → パラレルリンクの腕の角度
@@ -22,3 +22,5 @@ $ python gcode2points.py
 ```bash
 $ python gcode2thetas.py ./sample_stldata/DD_carriage_for_atom.gcode 100 200 80 10
 ```
+
+出力CSVは`output/thetas_DD_carriage_for_atom.csv`。
