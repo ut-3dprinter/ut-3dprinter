@@ -31,13 +31,15 @@ def calc_theta(point, l, r):
 
 
 def points2thetas(points, l, r):
-    rotation = numpy.array([[cos(2*pi/3), -sin(2*pi/3)],
-                            [sin(2*pi/3), cos(2*pi/3)]])
+    rotation = numpy.array([[cos(2*pi/3), -sin(2*pi/3), 0],
+                            [sin(2*pi/3),  cos(2*pi/3), 0],
+                            [          0,            0, 1],])
 
-    thetas = numpy.zeros((len(points), 3)
+    thetas = numpy.zeros((len(points), 3))
     for i, point1 in enumerate(points):
-        point2 = rotation.dot(point1) # rotate 2*pi/3
-        point3 = rotation.dot(point2) # rotate 4*pi/3
+        point1 = numpy.array(point1)
+        point2 = rotation.dot(point1.T).T # rotate 2*pi/3
+        point3 = rotation.dot(point2.T).T # rotate 4*pi/3
         theta1 = calc_theta(point1, l, r)
         theta2 = calc_theta(point2, l, r)
         theta3 = calc_theta(point3, l, r)

@@ -1,5 +1,7 @@
 #-*- coding: utf-8 -*-
 # gcode2thetas.py
+import pyutils
+
 import gcode2points
 import points2thetas
 
@@ -8,20 +10,25 @@ import argparse
 
 
 def gcode2thetas(gcode_file, l, r):
-    gcode_file = './sample_stldata/DD_carriage_for_atom.gcode'
-
+    print '... extracting points data from Gcode'
     points = gcode2points.gcode2points(gcode_file=gcode_file)
 
+    print '... computing thetas of arms from data points'
     thetas = points2thetas.points2thetas(points=points, l=l, r=r)
 
-    return thetas
+    print '... saving thetas to csv file'
+    filename = pyutils.file.get_filename_frompath(gcode_file)
+    filename = pyutils.file.change_filename(filename, extension='.csv')
+    filename = './output/thetas_' + filename
+    pyutils.data.save_tocsv(filename, thetas,
+                            header=['theta1', 'theta2', 'theta3'])
 
 
 def main(gcode_file, l1, l2, r1, r2):
     l = (l1, l2)
     r = (r1, r2)
-    thetas = gcode2thetas(gcode_file=gcode_file, l=l, r=r)
-    print thetas
+
+    gcode2thetas(gcode_file=gcode_file, l=l, r=r)
 
 
 if __name__ == '__main__':
