@@ -2,3 +2,7 @@
     saveanime='3dprinting.mp4', show=True)
             ^
 SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "gcode2points.py", line 128, in <module>
+    test_gcode2points(gcode_file=gcode_file)
+NameError: name 'gcode_file' is not defined
