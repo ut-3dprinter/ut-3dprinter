@@ -4,6 +4,8 @@
 # Reference : http://reprap.org/wiki/G-code
 import pyutils.graph
 
+import sys
+import argparse
 import numpy
 
 
@@ -114,11 +116,13 @@ def test_gcode2points(gcode_file):
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=False)
-    pyutils.graph.plot_3D_animation(X, Y, Z,
+    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=None
                                     saveanime='3dprinting.mp4', show=True)
 
 
 if __name__ == '__main__':
-    gcode_file = './sample_stldata/DD_carriage_for_atom.gcode'
+    parser = argparse.ArgumentParser()
+    parser.add_argument('gcode_file', type=str, help='gcode file path')
+    args = parser.parse_args(sys.argv[1:])
 
     test_gcode2points(gcode_file=gcode_file)
