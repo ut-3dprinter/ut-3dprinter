@@ -1,0 +1,4 @@
+  File "gcode2points.py", line 120
+    saveanime='3dprinting.mp4', show=True)
+            ^
+SyntaxError: invalid syntax
