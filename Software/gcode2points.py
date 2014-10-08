@@ -125,4 +125,4 @@ if __name__ == '__main__':
     parser.add_argument('gcode_file', type=str, help='gcode file path')
     args = parser.parse_args(sys.argv[1:])
 
-    test_gcode2points(gcode_file=gcode_file)
+    test_gcode2points(**vars(args))
