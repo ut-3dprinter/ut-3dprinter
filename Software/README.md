@@ -16,7 +16,7 @@ $ python gcode2points.py sample_stldata/DD_carriage_for_atom.gcode
 
 ### 3D Printing 動画
 
-`3dprinting.mp4`
+[3D Printing DD_carriage_for_atom.gcode](https://www.youtube.com/watch?v=ZJ2nRWYOFkk)
 
 
 ## Gcode → 線形補間した経路 → パラレルリンクの腕の角度
