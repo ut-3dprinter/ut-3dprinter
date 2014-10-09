@@ -45,40 +45,45 @@ def get_points_from_gcode_file(gcode_file):
         # get points used for linear interpolation
         point = {}
         for arg in arguments:
-            for cd in 'XYZ':
-                if arg.startswith(cd):
-                    point[cd] = float(arg[1:])
+            if arg.startswith('X'):
+                point['X'] = float(arg[1:])
+            elif arg.startswith('Y'):
+                point['Y'] = float(arg[1:])
+            elif arg.startswith('Z'):
+                point['Z'] = float(arg[1:])
         if point != {}:
             points.append(point)
 
-    return points
+    ret = []
+    x, y, z = 0, 0, 0 # initialize
+    for point in points:
+        x = point['X'] if 'X' in point else x
+        y = point['Y'] if 'Y' in point else y
+        z = point['Z'] if 'Z' in point else z
+        ret.append([x, y, z])
+
+    ret = numpy.array(ret)
+    return ret
 
 
 def get_interpolated_points(points):
     # initialize
-    start = [0, 0, 0]
-    start[0] = points[0]['X']
-    start[1] = points[0]['Y']
-    start[2] = points[0]['Z']
-    end = [0, 0, 0]
-    end[0] = points[1]['X'] if 'X' in points[1] else start[0]
-    end[1] = points[1]['Y'] if 'Y' in points[1] else start[1]
-    end[2] = points[1]['Z'] if 'Z' in points[1] else start[2]
+    start = points[0]
 
     # linear interpolation from Point0 to Point1
     interpolated = []
     for point in points[2:]:
         # print 'start:', start, 'end:', end
-
         current = start
+        end = point
 
         # move from start to end
         while True:
             # print 'current:', current
-            interpolated.append((current[0], current[1], current[2]-250))
+            interpolated.append([current[0], current[1], current[2]-250])
 
             # decide how to move from current position
-            for i in range(0, 3):
+            for i in range(0, 3): # i means x,y,z
                 if end[i] - current[i] > 1:
                     current[i] += 1
                 elif end[i] - current[i] < -1:
@@ -86,16 +91,11 @@ def get_interpolated_points(points):
                 else:
                     current[i] = end[i]
 
-            if current == end:
+            if (current == end).all():
                 break
 
         # update start and end points
-        start[0] = end[0] if 'X' in point else start[0]
-        start[1] = end[1] if 'Y' in point else start[1]
-        start[2] = end[2] if 'Z' in point else start[2]
-        end[0] = point['X'] if 'X' in point else end[0]
-        end[1] = point['Y'] if 'Y' in point else end[1]
-        end[2] = point['Z'] if 'Z' in point else end[2]
+        start = end
 
     return numpy.array(interpolated)
 
@@ -109,14 +109,18 @@ def gcode2points(gcode_file):
 
 
 def test_gcode2points(gcode_file):
-    Xs = gcode2points(gcode_file)
+    print '... getting points'
+    Xs = gcode2points(gcode_file=gcode_file)
+    X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
+    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=False)
 
+    Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
     print("Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})"
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
-    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=False)
-    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=None,
+    print '... making plotting animation'
+    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=1000,
                                     saveanime='3dprinting.mp4', show=True)
 
 
