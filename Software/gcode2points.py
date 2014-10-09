@@ -121,7 +121,6 @@ def test_gcode2points(gcode_file):
 
     print '... making plotting animation'
     pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=1000,
-                                    saveanime='3dprinting.mp4', show=True)
 
 
 if __name__ == '__main__':
