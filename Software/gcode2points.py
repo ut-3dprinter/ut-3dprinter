@@ -112,7 +112,7 @@ def test_gcode2points(gcode_file):
     print '... getting points'
     Xs = gcode2points(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
-    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=False)
+    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=True)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
@@ -121,6 +121,8 @@ def test_gcode2points(gcode_file):
 
     print '... making plotting animation'
     pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=1000,
+                                    saveanime='3dprinting.mp4',
+                                    show=True)
 
 
 if __name__ == '__main__':
