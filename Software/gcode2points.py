@@ -124,7 +124,8 @@ def test_gcode2points(gcode_file):
     print '... getting points'
     Xs = gcode2points(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
-    pyutils.graph.plot_3D(X, Y, Z, savefig='{}.png'.format(fname), show=True)
+    savefig = pyutils.file.change_filename(fname, '.png')
+    pyutils.graph.plot_3D(X, Y, Z, savefig=savefig, show=True)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
@@ -132,9 +133,9 @@ def test_gcode2points(gcode_file):
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     print '... making plotting animation'
-    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=500,
-                                    saveanime='{}.mp4'.format(fname),
-                                    show=True)
+    saveanime = pyutils.file.change_filename(fname, '.mp4')
+    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=None,
+                                    saveanime=saveanime, show=True)
 
 
 if __name__ == '__main__':
