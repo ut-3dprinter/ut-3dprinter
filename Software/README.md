@@ -13,7 +13,7 @@ $ python gcode2points.py sample_stldata/DD_carriage_for_atom.gcode
 
 出力動画
 ---
-[test2.mp4](http://youtu.be/1FviaQLbfXc)
+[test2.mp4](http://youtu.be/XC9xf_K4ywE)
 
 
 Gcodeから経路補完しそれをリンクの腕の角度へ
