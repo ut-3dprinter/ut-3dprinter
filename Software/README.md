@@ -11,7 +11,7 @@ $ python gcode2points.py sample_stldata/DD_carriage_for_atom.gcode
 
 ### 3D Printed 画像
 
-![3dprinted](3dprinted.png)
+![3dprinted](sample_stldata/3dprinted.png)
 
 
 ### 3D Printing 動画
