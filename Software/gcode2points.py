@@ -3,10 +3,19 @@
 #
 # Reference : http://reprap.org/wiki/G-code
 import pyutils.graph
+import pyutils.file
 
 import sys
 import argparse
 import numpy
+
+
+def reverse_bylayers(points):
+    Z_reverse = []
+    Z = points[:, 2]
+    for z in sorted(set(Z), reverse=True):
+        Z_reverse += list(points[Z == z])
+    return numpy.array(Z_reverse)
 
 
 def get_points_from_gcode_file(gcode_file):
@@ -63,6 +72,7 @@ def get_points_from_gcode_file(gcode_file):
         ret.append([x, y, z])
 
     ret = numpy.array(ret)
+    ret = reverse_bylayers(ret)
     return ret
 
 
@@ -109,10 +119,12 @@ def gcode2points(gcode_file):
 
 
 def test_gcode2points(gcode_file):
+    fname = pyutils.file.get_filename_frompath(gcode_file)
+
     print '... getting points'
     Xs = gcode2points(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
-    pyutils.graph.plot_3D(X, Y, Z, savefig='3dprinted.png', show=True)
+    pyutils.graph.plot_3D(X, Y, Z, savefig='{}.png'.format(fname), show=True)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
@@ -120,8 +132,8 @@ def test_gcode2points(gcode_file):
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     print '... making plotting animation'
-    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=1000,
-                                    saveanime='3dprinting.mp4',
+    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=500,
+                                    saveanime='{}.mp4'.format(fname),
                                     show=True)
 
 
