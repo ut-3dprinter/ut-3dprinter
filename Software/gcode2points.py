@@ -2,8 +2,7 @@
 # gcode2points.py
 #
 # Reference : http://reprap.org/wiki/G-code
-import pyutils.graph
-import pyutils.file
+import pyutils
 
 import sys
 import argparse
@@ -119,13 +118,13 @@ def gcode2points(gcode_file):
 
 
 def test_gcode2points(gcode_file):
-    fname = pyutils.file.get_filename_frompath(gcode_file)
+    fname = pyutils.get_filename_frompath(gcode_file)
 
     print '... getting points'
     Xs = gcode2points(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
-    savefig = pyutils.file.change_filename(fname, '.png')
-    pyutils.graph.plot_3D(X, Y, Z, savefig=savefig, show=True)
+    savefig = pyutils.change_filename(fname, '.png')
+    pyutils.plot_3D(X, Y, Z, savefig=savefig, show=False)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
@@ -133,8 +132,8 @@ def test_gcode2points(gcode_file):
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     print '... making plotting animation'
-    saveanime = pyutils.file.change_filename(fname, '.mp4')
-    pyutils.graph.plot_3D_animation(X, Y, Z, step=None, n_frame=None,
+    saveanime = pyutils.change_filename(fname, '.mp4')
+    pyutils.plot_3D_animation(X, Y, Z, step=None, n_frame=None,
                                     saveanime=saveanime, show=True)
 
 

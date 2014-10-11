@@ -17,10 +17,10 @@ def gcode2thetas(gcode_file, l, r):
     thetas = points2thetas.points2thetas(points=points, l=l, r=r)
 
     print '... saving thetas to csv file'
-    filename = pyutils.file.get_filename_frompath(gcode_file)
-    filename = pyutils.file.change_filename(filename, extension='.csv')
+    filename = pyutils.get_filename_frompath(gcode_file)
+    filename = pyutils.change_filename(filename, extension='.csv')
     filename = './output/thetas_' + filename
-    pyutils.data.save_tocsv(filename, thetas,
+    pyutils.save_tocsv(filename, thetas,
                             header=['theta1', 'theta2', 'theta3'])
 
 
