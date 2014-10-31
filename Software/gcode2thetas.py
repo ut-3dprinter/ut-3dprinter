@@ -7,6 +7,7 @@ import points2thetas
 
 import sys
 import argparse
+import numpy as np
 
 
 def gcode2thetas(gcode_file, l, r):
@@ -18,10 +19,18 @@ def gcode2thetas(gcode_file, l, r):
 
     print '... saving thetas to csv file'
     filename = pyutils.get_filename_frompath(gcode_file)
-    filename = pyutils.change_filename(filename, extension='.csv')
+    filename = pyutils.change_filename(filename, extension='.dat')
     filename = './output/thetas_' + filename
-    pyutils.save_tocsv(filename, thetas,
-                            header=['theta1', 'theta2', 'theta3'])
+    print thetas
+    thetas = np.ushort(thetas)
+    print thetas
+    f = open(filename, mode='wb')
+    for theta in thetas:
+        f.write(theta[0])
+        f.write(theta[1])
+        f.write(theta[2])
+    f.close()
+
 
 
 def main(gcode_file, l1, l2, r1, r2):

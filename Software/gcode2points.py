@@ -117,7 +117,8 @@ def gcode2points(gcode_file):
     return points
 
 
-def test_gcode2points(gcode_file):
+def test_gcode2points(gcode_file, n_frame):
+    print '==> params:', gcode_file, n_frame
     fname = pyutils.get_filename_frompath(gcode_file)
 
     print '... getting points'
@@ -125,21 +126,34 @@ def test_gcode2points(gcode_file):
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
     savefig = pyutils.change_filename(fname, '.png')
     pyutils.plot_3D(X, Y, Z, savefig=savefig, show=False)
+    for z in set(Z):
+        Xz, Yz, Zz = X[Z == z], Y[Z == z], Z[Z == z]
+        savefig = pyutils.change_filename(fname, '{}.png'.format(z))
+        pyutils.plot_2D(Xz, Yz, xlim=[X.min(), X.max()],
+                ylim=[Y.min(), Y.max()], savefig=savefig, show=False)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
-    X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
+    X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]-250
     print("Limits: X({0}:{1}), Y({2}:{3}) Z:({4}:{5})"
           .format(X.min(), X.max(), Y.min(), Y.max(), Z.min(), Z.max()))
 
     print '... making plotting animation'
-    saveanime = pyutils.change_filename(fname, '.mp4')
-    pyutils.plot_3D_animation(X, Y, Z, step=None, n_frame=None,
-                                    saveanime=saveanime, show=True)
+    for z in set(Z):
+        print '... z == {}'.format(z)
+        Xz, Yz, Zz = X[Z == z], Y[Z == z], Z[Z == z]
+        saveanime = pyutils.change_filename(fname, '{}.mp4'.format(z))
+        pyutils.plot_3D_animation(X=Xz, Y=Yz, Z=Zz, step=None, n_frame=n_frame,
+                                  view_init=(90, 0),
+                                  xlim=[X.min(), X.max()],
+                                  ylim=[Y.min(), Y.max()],
+                                  zlim=[Z.min(), Z.max()],
+                                  saveanime=saveanime, show=False)
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('gcode_file', type=str, help='gcode file path')
+    parser.add_argument('--nframe', dest='n_frame', type=int)
     args = parser.parse_args(sys.argv[1:])
 
     test_gcode2points(**vars(args))
