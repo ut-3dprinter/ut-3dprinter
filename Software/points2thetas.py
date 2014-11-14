@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 # points2angle.py
 import numpy as np
-from numpy import cos, sin, pi
+from numpy import cos, sin, pi, sqrt
 import ctypes
 
 
@@ -10,6 +10,8 @@ def calc_theta(point, l, r):
     seen from (r[0], 0)
     """
     x, y, z = point
+    x -= 15. / sqrt(2)
+    y -= 15. / sqrt(2)
 
     num = 2. * (x + r[1] - r[0]) * l[0]
 

@@ -21,9 +21,9 @@ def gcode2thetas(gcode_file, l, r):
     filename = pyutils.get_filename_frompath(gcode_file)
     filename = pyutils.change_filename(filename, extension='.dat')
     filename = './output/thetas_' + filename
-    print thetas
+
     thetas = np.ushort(thetas)
-    print thetas
+
     f = open(filename, mode='wb')
     for theta in thetas:
         f.write(theta[0])
