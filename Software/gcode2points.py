@@ -77,7 +77,7 @@ def get_points_from_gcode_file(gcode_file):
 
 def get_interpolated_points(points):
     """Zはoffset引くことによって座標の原点を下に持ってくる"""
-    offsets = [100, 100, 200]
+    offsets = [100, 100, 220]
     # initialize
     start = points[0]
 
