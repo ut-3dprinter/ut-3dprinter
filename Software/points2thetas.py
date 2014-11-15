@@ -43,6 +43,7 @@ def calc_theta(point, l, r):
     if theta < thresh:
         return None
 
+    theta += -thresh
     step = 25600. * theta / (2. * pi)
 
     return step
