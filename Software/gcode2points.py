@@ -71,12 +71,13 @@ def get_points_from_gcode_file(gcode_file):
         ret.append([x, y, z])
 
     ret = numpy.array(ret)
-    ret = reverse_bylayers(ret)
+    # ret = reverse_bylayers(ret)
     return ret
 
 
 def get_interpolated_points(points):
-    """Zは250引くことによって座標の原点を下に持ってくる"""
+    """Zはoffset引くことによって座標の原点を下に持ってくる"""
+    offsets = [100, 100, 200]
     # initialize
     start = points[0]
 
@@ -90,7 +91,7 @@ def get_interpolated_points(points):
         # move from start to end
         while True:
             # print 'current:', current
-            interpolated.append([current[0], current[1], current[2]-250])
+            interpolated.append([current[0]-offsets[0], current[1]-offsets[1], current[2]-offsets[2]])
 
             # decide how to move from current position
             for i in range(0, 3): # i means x,y,z

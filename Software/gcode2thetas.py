@@ -22,7 +22,7 @@ def gcode2thetas(gcode_file, l, r):
     filename = pyutils.change_filename(filename, extension='.dat')
     filename = './output/thetas_' + filename
 
-    thetas = np.ushort(thetas)
+    thetas = np.short(thetas)
 
     f = open(filename, mode='wb')
     for theta in thetas:
