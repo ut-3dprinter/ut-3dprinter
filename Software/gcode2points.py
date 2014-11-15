@@ -115,6 +115,7 @@ def gcode2points(gcode_file):
     points = get_points_from_gcode_file(gcode_file)
 
     points = get_interpolated_points(points)
+    numpy.save('points', points)
 
     return points
 
@@ -128,11 +129,11 @@ def test_gcode2points(gcode_file, n_frame):
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]
     savefig = pyutils.change_filename(fname, '.png')
     pyutils.plot_3D(X, Y, Z, savefig=savefig, show=False)
-    for z in set(Z):
-        Xz, Yz, Zz = X[Z == z], Y[Z == z], Z[Z == z]
-        savefig = pyutils.change_filename(fname, '{}.png'.format(z))
-        pyutils.plot_2D(Xz, Yz, xlim=[X.min(), X.max()],
-                ylim=[Y.min(), Y.max()], savefig=savefig, show=False)
+    # for z in set(Z):
+    #     Xz, Yz, Zz = X[Z == z], Y[Z == z], Z[Z == z]
+    #     savefig = pyutils.change_filename(fname, '{}.png'.format(z))
+    #     pyutils.plot_2D(Xz, Yz, xlim=[X.min(), X.max()],
+    #             ylim=[Y.min(), Y.max()], savefig=savefig, show=False)
 
     Xs = get_points_from_gcode_file(gcode_file=gcode_file)
     X, Y, Z = Xs[:, 0], Xs[:, 1], Xs[:, 2]-250
@@ -145,7 +146,7 @@ def test_gcode2points(gcode_file, n_frame):
         Xz, Yz, Zz = X[Z == z], Y[Z == z], Z[Z == z]
         saveanime = pyutils.change_filename(fname, '{}.mp4'.format(z))
         pyutils.plot_3D_animation(X=Xz, Y=Yz, Z=Zz, step=None, n_frame=n_frame,
-                                  view_init=(90, 0),
+                                  # view_init=(90, 0),
                                   xlim=[X.min(), X.max()],
                                   ylim=[Y.min(), Y.max()],
                                   zlim=[Z.min(), Z.max()],
