@@ -4,33 +4,44 @@ import numpy as np
 from numpy import cos, sin, pi, sqrt
 import ctypes
 
+thresh = -0.1997885430712449
 
 def calc_theta(point, l, r):
     """Calculate theta using x, y, z, l and r
     seen from (r[0], 0)
     """
     x, y, z = point
-    x -= 15. / sqrt(2)
-    y -= 15. / sqrt(2)
+    x_ = x + r[1] * cos(pi/6) - r[0]
 
-    num = 2. * (x + r[1] - r[0]) * l[0]
+    num = 2. * x_ * l[0]
 
-    D = 1. * (2 * (x + r[1] - r[0]) * l[0])**2 + (2 * z * l[0])**2 \
-        - ((x + r[1] - r[0])**2 + y**2 + z**2 + l[0]**2 - l[1]**2)**2 
+    D = 1. * (2 * x_ * l[0])**2 + (2 * z * l[0])**2 \
+        - (x_**2 + y**2 + z**2 + l[0]**2 - l[1]**2)**2
     if D < 0:
         print (x, y, z)
         return None
 
-    num += np.sqrt(D)
+    num1 = num + np.sqrt(D)
+    num2 = num - np.sqrt(D)
 
-    denum = 1. * (x + r[1] - r[0])**2 + y**2 + \
+    denum = 1. * x_**2 + y**2 + \
             z**2 + l[0]**2 - l[1]**2 -2*z*l[0]
     if denum == 0:
         print (x, y, z)
         return None
 
-    res = num / denum
-    theta = 2. * np.arctan(res) # [rad]
+    res1 = num1 / denum
+    res2 = num2 / denum
+
+    theta1 = 2. * np.arctan(res1) # [rad]
+    theta2 = 2. * np.arctan(res2) # [rad]
+
+    # print theta1 / pi * 360
+    # print theta2 / pi * 360
+
+    theta = max(theta1, theta2)
+    if theta < thresh:
+        return None
 
     step = 25600. * theta / (2. * pi)
 
@@ -51,11 +62,12 @@ def points2thetas(points, l, r):
         theta1 = calc_theta(point1, l, r)
         theta2 = calc_theta(point2, l, r)
         theta3 = calc_theta(point3, l, r)
+        theta = [theta1, theta2, theta3]
 
-        if None in [theta1, theta2, theta3]:
+        if None in theta:
             continue
         # print [theta1, theta2, theta3]
-        thetas.append([theta1, theta2, theta3])
+        thetas.append(theta):
         # thetas[i] = np.array([theta1, theta2, theta3])
     thetas = np.array(thetas)
     return thetas

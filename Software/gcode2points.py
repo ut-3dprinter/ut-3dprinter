@@ -77,7 +77,9 @@ def get_points_from_gcode_file(gcode_file):
 
 def get_interpolated_points(points):
     """Zはoffset引くことによって座標の原点を下に持ってくる"""
-    offsets = [100, 100, 220]
+    from math import sqrt
+    # 工具がずれる分
+    offsets = [100 - 15./sqrt(2), 100 - 15./sqrt(2), 220]
     # initialize
     start = points[0]
 
@@ -91,7 +93,9 @@ def get_interpolated_points(points):
         # move from start to end
         while True:
             # print 'current:', current
-            interpolated.append([current[0]-offsets[0], current[1]-offsets[1], current[2]-offsets[2]])
+            interpolated.append([current[0]-offsets[0],
+                                 current[1]-offsets[1],
+                                 current[2]-offsets[2]])
 
             # decide how to move from current position
             for i in range(0, 3): # i means x,y,z
