@@ -8,24 +8,45 @@ import argparse
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
-def calc_theta(x, y, z, l, r):
-    num = 2 * (x + r[1] - r[0]) * l[0]
+thresh = -0.1997885430712449
+def calc_theta(x,y,z, l, r):
+    """Calculate theta using x, y, z, l and r
+    seen from (r[0], 0)
+    """
+    x_ = x + r[1] * cos(pi/6) - r[0]
 
-    D = (2 * (x + r[1] - r[0]) * l[0])**2 + (2 * z * l[0])**2 \
-        - ((x + r[1] - r[0])**2 + y**2 + z**2 + l[0]**2 - l[1]**2)**2 
+    num = 2. * x_ * l[0]
+
+    D = 1. * (2 * x_ * l[0])**2 + (2 * z * l[0])**2 \
+        - (x_**2 + y**2 + z**2 + l[0]**2 - l[1]**2)**2
     if D < 0:
+        # print (x, y, z)
         return None
 
-    num += sqrt(D)
+    num1 = num + np.sqrt(D)
+    num2 = num - np.sqrt(D)
 
-    denum = (x + r[1] - r[0])**2 + y**2 + z**2 + l[0]**2 - l[1]**2 -2*z*l[0]
+    denum = 1. * x_**2 + y**2 + \
+            z**2 + l[0]**2 - l[1]**2 -2*z*l[0]
     if denum == 0:
+        # print (x, y, z)
         return None
 
-    res = num / denum
-    theta = 2 * atan(res) / pi * 180
+    res1 = num1 / denum
+    res2 = num2 / denum
+
+    theta1 = 2. * np.arctan(res1) # [rad]
+    theta2 = 2. * np.arctan(res2) # [rad]
+
+    # print theta1 / pi * 360
+    # print theta2 / pi * 360
+
+    theta = max(theta1, theta2)
+    if theta < thresh:
+        return None
 
     return theta
+
 
 def save_points_data(Xs, thetas):
     f = open('points_and_theta.csv', 'wb')
@@ -57,9 +78,9 @@ def main(sparseness, l1, l2, r1, r2):
 
     Xs = []
     thetas = []
-    rng = {'x': range(-50, 51, sparseness),
-           'y': range(-50, 51, sparseness),
-           'z': range(-l[0]-l[1], -l[0]+1, sparseness)} # 可動範囲候補
+    rng = {'x': range(-80, 81, sparseness),
+           'y': range(-80, 81, sparseness),
+           'z': range(-l[0]-l[1], 0, sparseness)} # 可動範囲候補
 
     cube = [[],[],[]]
     for z in rng['z']:
@@ -116,17 +137,18 @@ def main(sparseness, l1, l2, r1, r2):
 
     fig = plt.figure()
     ax = Axes3D(fig)
-    ax.scatter(X[theta_deltas_floor==-3.0], Y[theta_deltas_floor==-3.0], Z[theta_deltas_floor==-3.0], c='b', marker='^', alpha=0.5)
-    ax.scatter(X[theta_deltas_floor==-2.0], Y[theta_deltas_floor==-2.0], Z[theta_deltas_floor==-2.0], c='g', marker='^', alpha=0.5)
-    ax.scatter(X[theta_deltas_floor==-1.0], Y[theta_deltas_floor==-1.0], Z[theta_deltas_floor==-1.0], c='r', marker='^', alpha=0.5)
-    ax.scatter(X[theta_deltas_floor==0.0], Y[theta_deltas_floor==0.0], Z[theta_deltas_floor==0.0], c='c', marker='^', alpha=0.5)
-    ax.scatter(X[theta_deltas_floor==1.0], Y[theta_deltas_floor==1.0], Z[theta_deltas_floor==1.0], c='m', marker='^', alpha=0.5)
+    ax.scatter(X, Y, Z, c='r', marker='^', alpha=0.5)
+    # ax.scatter(X[theta_deltas_floor==-3.0], Y[theta_deltas_floor==-3.0], Z[theta_deltas_floor==-3.0], c='b', marker='^', alpha=0.5)
+    # ax.scatter(X[theta_deltas_floor==-2.0], Y[theta_deltas_floor==-2.0], Z[theta_deltas_floor==-2.0], c='g', marker='^', alpha=0.5)
+    # ax.scatter(X[theta_deltas_floor==-1.0], Y[theta_deltas_floor==-1.0], Z[theta_deltas_floor==-1.0], c='r', marker='^', alpha=0.5)
+    # ax.scatter(X[theta_deltas_floor==0.0], Y[theta_deltas_floor==0.0], Z[theta_deltas_floor==0.0], c='c', marker='^', alpha=0.5)
+    # ax.scatter(X[theta_deltas_floor==1.0], Y[theta_deltas_floor==1.0], Z[theta_deltas_floor==1.0], c='m', marker='^', alpha=0.5)
 
     # cube = np.array(cube)
     # ax.scatter(cube[0], cube[1], cube[2], c='w', marker='o', alpha=0.05)
 
-    #plt.show()
-    plt.savefig('can_move.png')
+    plt.show()
+    # plt.savefig('can_move.png')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Analyze about motion of parallel link')
