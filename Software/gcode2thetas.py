@@ -43,10 +43,10 @@ def main(gcode_file, l1, l2, r1, r2):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('gcode_file', type=str, help='gcode file path')
-    parser.add_argument('l1', type=int, help='l1')
-    parser.add_argument('l2', type=int, help='l2')
-    parser.add_argument('r1', type=int, help='r1')
-    parser.add_argument('r2', type=int, help='r2')
+    parser.add_argument('l1', type=int, help='l1: upper arm length')
+    parser.add_argument('l2', type=int, help='l2: lower arm length')
+    parser.add_argument('r1', type=int, help='r1: upper stage radius')
+    parser.add_argument('r2', type=int, help='r2: lower stage radius')
     args = parser.parse_args(sys.argv[1:])
 
     main(**vars(args))

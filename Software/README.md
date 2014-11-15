@@ -24,7 +24,7 @@ Gcodeから経路補完しそれをリンクの腕の角度へ
 
 ```bash
 $ python gcode2thetas.py --help # ヘルプ
-$ python gcode2thetas.py sample_stldata/DD_carriage_for_atom.gcode 100 200 80 10
+$ python gcode2thetas.py sample_stldata/DD_carriage_for_atom.gcode 96 162 80 12
 ```
 
 
