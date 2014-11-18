@@ -68,7 +68,7 @@ def points2thetas(points, l, r):
         if None in theta:
             continue
         # print [theta1, theta2, theta3]
-        thetas.append(theta):
+        thetas.append(theta)
         # thetas[i] = np.array([theta1, theta2, theta3])
     thetas = np.array(thetas)
     return thetas

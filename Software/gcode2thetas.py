@@ -20,7 +20,7 @@ def gcode2thetas(gcode_file, l, r):
     print '... saving thetas to csv file'
     filename = pyutils.get_filename_frompath(gcode_file)
     filename = pyutils.change_filename(filename, extension='.dat')
-    filename = './output/thetas_' + filename
+    filename = './dat_files/thetas_' + filename
 
     thetas = np.short(thetas)
 

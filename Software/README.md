@@ -31,7 +31,7 @@ $ python gcode2thetas.py sample_stldata/DD_carriage_for_atom.gcode 96 162 80 12
 出力datファイル
 ---
 `DD_carriage_for_atom.gcode`からの出力  
-[thetas_DD_carriage_for_atom.dat](https://raw.githubusercontent.com/ut-3dprinter/ut-3dprinter/master/Software/output/thetas_DD_carriage_for_atom.dat)
+[thetas_DD_carriage_for_atom.dat](https://raw.githubusercontent.com/ut-3dprinter/ut-3dprinter/master/Software/dat_files/thetas_DD_carriage_for_atom.dat)
 
 datファイルの値の型は`short int`です。
 値を確認するためには`c_readtest.c`を利用してください。
